@@ -1,0 +1,108 @@
+-- FUNCTION: public.get_expense_over_limit(integer, integer, integer, timestamp without time zone, timestamp without time zone)
+
+-- DROP FUNCTION IF EXISTS public.get_expense_over_limit(integer, integer, integer, timestamp without time zone, timestamp without time zone);
+
+CREATE OR REPLACE FUNCTION public.get_expense_over_limit(
+	p_branch_id integer,
+	p_transport_id integer,
+	p_driver_id integer,
+	p_from_date timestamp without time zone,
+	p_to_date timestamp without time zone)
+    RETURNS TABLE(expense_type_id integer, expense_price numeric, monthly_limit numeric, is_over_limit boolean) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+RETURN QUERY
+	WITH E_LIMIT AS(
+	SELECT 
+		TS.TRANSPORT_ID,
+		TS.DRIVER_ID,
+		SUM(COALESCE(TSL.MONTHLY_LIMIT, 0)) AS LIQUID_MONTHLY_LIMIT,
+		SUM(COALESCE(TSO.MONTHLY_LIMIT, 0)) AS OIL_MONTHLY_LIMIT,
+		SUM(COALESCE(TSF.MONTHLY_LIMIT, 0)) AS FUEL_MONTHLY_LIMIT
+	FROM DOC_TRANSPORT_SETTING AS TS
+	LEFT JOIN DOC_TRANSPORT_SETTING_LIQUID AS TSL ON TSL.OWNER_ID = TS.ID
+	LEFT JOIN DOC_TRANSPORT_SETTING_OIL AS TSO ON TSO.OWNER_ID = TS.ID
+	LEFT JOIN DOC_TRANSPORT_SETTING_FUEL AS TSF ON TSF.OWNER_ID = TS.ID
+	WHERE TS.STATUS_ID = 3 AND
+		TS.TRANSPORT_ID = p_transport_id AND
+		TS.DRIVER_ID = p_driver_id AND
+		TS.BRANCH_ID = p_branch_id
+	GROUP BY TS.TRANSPORT_ID, TS.DRIVER_ID
+	)
+
+	SELECT 
+			7 AS EXPENSE_TYPE_ID,
+			COALESCE(SUM(R.LITRE * R.LITRE_PRICE), 0) AS EXPENSE_PRICE,
+			COALESCE(MAX(E_LIMIT.FUEL_MONTHLY_LIMIT), 0) AS MONTHLY_LIMIT,
+			CASE 
+				WHEN SUM(R.LITRE * R.LITRE_PRICE) > MAX(E_LIMIT.FUEL_MONTHLY_LIMIT) 
+						AND MAX(E_LIMIT.FUEL_MONTHLY_LIMIT) <> 0
+				THEN TRUE 
+				ELSE FALSE 
+			END AS IS_OVER_LIMIT
+		FROM DOC_REFUEL AS R
+		LEFT JOIN E_LIMIT ON R.TRANSPORT_ID = E_LIMIT.TRANSPORT_ID 
+			AND R.DRIVER_ID = E_LIMIT.DRIVER_ID
+		WHERE
+			R.STATUS_ID = 3 AND
+			R.TRANSPORT_ID = p_transport_id AND
+			R.DRIVER_ID = p_driver_id AND
+			R.BRANCH_ID = p_branch_id AND
+			(R.MODIFIED_AT >= p_from_date OR p_from_date IS NULL) AND
+			(R.MODIFIED_AT <= p_to_date OR p_to_date IS NULL)
+	
+	UNION ALL
+	SELECT 
+			2 AS EXPENSE_TYPE_ID,
+			COALESCE(SUM(EL.TOTAL_PRICE), 0) AS EXPENSE_PRICE,
+			COALESCE(MAX(E_LIMIT.LIQUID_MONTHLY_LIMIT), 0) AS MONTHLY_LIMIT,
+			CASE 
+				WHEN COALESCE(SUM(EL.TOTAL_PRICE), 0) > COALESCE(MAX(E_LIMIT.FUEL_MONTHLY_LIMIT), 0) 
+						AND COALESCE(MAX(E_LIMIT.FUEL_MONTHLY_LIMIT), 0) <> 0
+				THEN TRUE 
+				ELSE FALSE 
+			END AS IS_OVER_LIMIT
+		FROM DOC_EXPENSE AS E
+		JOIN DOC_EXPENSE_LIQUID AS EL ON E.ID = EL.OWNER_ID
+		LEFT JOIN E_LIMIT ON E.TRANSPORT_ID = E_LIMIT.TRANSPORT_ID 
+			AND E.DRIVER_ID = E_LIMIT.DRIVER_ID
+		WHERE
+			E.STATUS_ID = 3 AND
+			E.TRANSPORT_ID = p_transport_id AND
+			E.DRIVER_ID = p_driver_id AND
+			E.BRANCH_ID = p_branch_id AND
+			(E.MODIFIED_AT >= p_from_date OR p_from_date IS NULL) AND
+			(E.MODIFIED_AT <= p_to_date OR p_to_date IS NULL)
+		
+	UNION ALL
+	SELECT 
+			1 AS EXPENSE_TYPE_ID,
+			COALESCE(SUM(EO.TOTAL_PRICE), 0) AS EXPENSE_PRICE,
+			COALESCE(MAX(E_LIMIT.OIL_MONTHLY_LIMIT), 0) AS MONTHLY_LIMIT,
+			CASE 
+				WHEN COALESCE(SUM(EO.TOTAL_PRICE), 0) > COALESCE(MAX(E_LIMIT.OIL_MONTHLY_LIMIT), 0) 
+						AND COALESCE(MAX(E_LIMIT.OIL_MONTHLY_LIMIT), 0) <> 0
+				THEN TRUE 
+				ELSE FALSE 
+			END AS IS_OVER_LIMIT
+		FROM DOC_EXPENSE AS E
+		JOIN DOC_EXPENSE_OIL AS EO ON E.ID = EO.OWNER_ID
+		LEFT JOIN E_LIMIT ON E.TRANSPORT_ID = E_LIMIT.TRANSPORT_ID 
+			AND E.DRIVER_ID = E_LIMIT.DRIVER_ID
+		WHERE
+			E.STATUS_ID = 3 AND
+			E.TRANSPORT_ID = p_transport_id AND
+			E.DRIVER_ID = p_driver_id AND
+			E.BRANCH_ID = p_branch_id AND
+			(E.MODIFIED_AT >= p_from_date OR p_from_date IS NULL) AND
+			(E.MODIFIED_AT <= p_to_date OR p_to_date IS NULL);
+END;
+$BODY$;
+
+ALTER FUNCTION public.get_expense_over_limit(integer, integer, integer, timestamp without time zone, timestamp without time zone)
+    OWNER TO postgres;

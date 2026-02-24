@@ -1,0 +1,7 @@
+1. Run the following commands to add migration in Package Manager Console:  
+
+Add-Migration <MIGRATION_NAME>  -Context PgSqlContext -OutputDir Migrations/PgSqlMigrations
+
+Add-Migration <MIGRATION_NAME>  -Context SqlServerContext -OutputDir Migrations/SqlServerMigrations
+
+Add-Migration <MIGRATION_NAME>  -Context OracleContext -OutputDir Migrations/OracleMigrations

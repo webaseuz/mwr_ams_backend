@@ -1,0 +1,20 @@
+﻿using AutoMapper;
+using AutoPark.Domain;
+using Bms.Core.Domain;
+
+namespace AutoPark.Application.UseCases.Info.Contractors;
+
+public class ContractorBriefDtoProfile : Profile
+{
+    int lang = default;
+    public ContractorBriefDtoProfile()
+    {
+        //ContractorriefDto
+        CreateMap<Contractor, ContractorBriefDto>()
+         .ForMember(src => src.StateName, conf => conf.MapFrom(ent => ent.State.Translates.AsQueryable().FirstOrDefault(StateTranslate.GetExpr(TranslateColumn.full_name, lang)).TranslateText ?? ent.State.FullName))
+          .ForMember(src => src.Bank, conf => conf.MapFrom(ent => ent.Bank.FullName))
+         .ForMember(src => src.RegionName, conf => conf.MapFrom(ent => ent.Region.FullName))
+         .ForMember(src => src.CountryName, conf => conf.MapFrom(ent => ent.Country.FullName))
+         .ForMember(src => src.DistrictName, conf => conf.MapFrom(ent => ent.District.FullName));
+    }
+}

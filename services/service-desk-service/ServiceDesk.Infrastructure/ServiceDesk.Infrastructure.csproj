@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\libs\dotnet\common\WEBASE.LogSdk\WEBASE.LogSdk.csproj" />
+    <ProjectReference Include="..\..\..\libs\dotnet\core\Bms.Core.Infrastructure\Bms.Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\ServiceDesk.Application\ServiceDesk.Application.csproj" />
+  </ItemGroup>
+
+</Project>

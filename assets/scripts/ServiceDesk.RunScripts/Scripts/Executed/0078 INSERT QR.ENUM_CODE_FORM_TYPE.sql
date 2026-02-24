@@ -1,0 +1,4 @@
+INSERT INTO QR.ENUM_CODE_FORM_TYPE (ID,ORDER_CODE,SHORT_NAME,FULL_NAME,STATE_ID)
+VALUES 
+	(1,'001',N'QR код',N'QR код',1),
+	(2,'002',N'Штрих-код',N'Штрих-код',1);

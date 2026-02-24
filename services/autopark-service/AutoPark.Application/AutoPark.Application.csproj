@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\libs\dotnet\core\Bms.Core.Application\Bms.Core.Application.csproj" />
+		<ProjectReference Include="..\AutoPark.Domain\AutoPark.Domain.csproj" />
+		<ProjectReference Include="..\AutoPark.Integration\AutoPark.Integration.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="UseCases\Account\Profile\Command\" />
+		<Folder Include="UseCases\Enum\Language\" />
+		<Folder Include="UseCases\Hl\PresentNotification\Command\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MiniExcel" />
+	  <PackageReference Include="Quartz" />
+	  <PackageReference Include="Quartz.Extensions.Hosting" />
+	</ItemGroup>
+
+</Project>

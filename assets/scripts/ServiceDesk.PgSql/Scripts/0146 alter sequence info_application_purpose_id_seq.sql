@@ -1,0 +1,1 @@
+ALTER SEQUENCE info_application_purpose_id_seq RESTART WITH 4;

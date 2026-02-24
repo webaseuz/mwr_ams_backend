@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bms.Bff.Web.Domain\Bms.Bff.Web.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\libs\dotnet\common\Bms.Common.Application\Bms.Common.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="AutoMapper" />
+  </ItemGroup>
+
+</Project>

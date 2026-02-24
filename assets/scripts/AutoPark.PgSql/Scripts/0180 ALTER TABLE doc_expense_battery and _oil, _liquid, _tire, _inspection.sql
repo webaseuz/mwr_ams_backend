@@ -1,0 +1,29 @@
+ALTER TABLE public.doc_expense_battery
+ALTER COLUMN MILE_AGE SET DEFAULT 0;
+
+ALTER TABLE public.doc_expense_battery
+ALTER COLUMN MILE_AGE SET NOT NULL;
+
+ALTER TABLE public.doc_expense_oil
+ALTER COLUMN MILE_AGE SET DEFAULT 0;
+
+ALTER TABLE public.doc_expense_oil
+ALTER COLUMN MILE_AGE SET NOT NULL;
+
+ALTER TABLE public.doc_expense_liquid
+ALTER COLUMN MILE_AGE SET DEFAULT 0;
+
+ALTER TABLE public.doc_expense_liquid
+ALTER COLUMN MILE_AGE SET NOT NULL;
+
+ALTER TABLE public.doc_expense_tire
+ALTER COLUMN MILE_AGE SET DEFAULT 0;
+
+ALTER TABLE public.doc_expense_tire
+ALTER COLUMN MILE_AGE SET NOT NULL;
+
+ALTER TABLE public.doc_expense_inspection
+ALTER COLUMN MILE_AGE SET DEFAULT 0;
+
+ALTER TABLE public.doc_expense_inspection
+ALTER COLUMN MILE_AGE SET NOT NULL;

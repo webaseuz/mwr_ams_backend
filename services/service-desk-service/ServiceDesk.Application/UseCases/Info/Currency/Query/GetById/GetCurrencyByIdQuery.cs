@@ -1,0 +1,9 @@
+﻿using MediatR;
+
+namespace ServiceDesk.Application.UseCases.Currencies;
+
+public class GetCurrencyByIdQuery :
+    IRequest<CurrencyDto>
+{
+    public int Id { get; set; }
+}

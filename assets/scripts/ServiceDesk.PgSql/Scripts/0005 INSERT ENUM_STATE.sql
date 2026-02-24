@@ -1,0 +1,2 @@
+INSERT INTO ENUM_STATE (ID, SHORT_NAME, FULL_NAME) 
+VALUES (1,E'А',E'Актив'),(2,E'П',E'Пассив');

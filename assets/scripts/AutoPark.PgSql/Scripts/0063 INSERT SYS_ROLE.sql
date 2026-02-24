@@ -1,0 +1,3 @@
+INSERT INTO SYS_ROLE 
+(ID,SHORT_NAME, FULL_NAME, IS_ADMIN, STATE_ID) VALUES 
+(1,N'Адм', N'Админстратор', true, 1);

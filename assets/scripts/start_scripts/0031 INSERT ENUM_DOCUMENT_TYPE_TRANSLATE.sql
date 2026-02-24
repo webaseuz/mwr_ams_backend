@@ -1,0 +1,25 @@
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (1,1,'full_name',E'Паспорт');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (2,1,'full_name',E'ID карта');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (3,1,'full_name',E'Свидетельство о рождении');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (4,1,'full_name',E'Иностранный документ');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (1,2,'full_name',E'Паспорт');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (2,2,'full_name',E'ID карта');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (3,2,'full_name',E'Туғилганлик тўғрисида гувоҳнома');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (4,2,'full_name',E'Чет эл ҳужжати');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (1,3,'full_name',E'Pasport');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (2,3,'full_name',E'ID karta');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (3,3,'full_name',E'Tugʼilganlik toʼgʼrisida guvohnoma');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (4,3,'full_name',E'Chet el hujjati');
+
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (1,1,'short_name',E'Паспорт');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (2,1,'short_name',E'ID карта');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (3,1,'short_name',E'Свидетельство о рождении');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (4,1,'short_name',E'Иностранный документ');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (1,2,'short_name',E'Паспорт');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (2,2,'short_name',E'ID карта');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (3,2,'short_name',E'Туғилганлик тўғрисида гувоҳнома');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (4,2,'short_name',E'Чет эл ҳужжати');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (1,3,'short_name',E'Pasport');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (2,3,'short_name',E'ID karta');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (3,3,'short_name',E'Tugʼilganlik toʼgʼrisida guvohnoma');
+insert into ENUM_DOCUMENT_TYPE_TRANSLATE(OWNER_ID, LANGUAGE_ID, COLUMN_NAME, TRANSLATE_TEXT) values (4,3,'short_name',E'Chet el hujjati');
