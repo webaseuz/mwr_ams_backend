@@ -1,6 +1,0 @@
-@ServiceDesk.MobileApi_HostAddress = http://localhost:5159
-
-GET {{ServiceDesk.MobileApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
