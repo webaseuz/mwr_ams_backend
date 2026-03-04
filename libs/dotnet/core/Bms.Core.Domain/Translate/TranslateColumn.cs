@@ -1,7 +1,0 @@
-namespace Bms.Core.Domain;
-
-public enum TranslateColumn
-{
-    short_name,
-    full_name
-}

@@ -1,6 +1,0 @@
-@AutoPark.WebApi_HostAddress = http://localhost:5131
-
-GET {{AutoPark.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

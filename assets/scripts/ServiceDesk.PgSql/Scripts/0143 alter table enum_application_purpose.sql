@@ -1,2 +1,0 @@
-alter table enum_application_purpose 
-rename to info_application_purpose;
