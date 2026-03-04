@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>WEBASE LLC</Authors>
+    <Company>WEBASE LLC</Company>
+    <Version>$([System.DateTime]::Now.ToString(yyyy.MM.dd.HHmm))</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\kizzbkrq.340~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="PasswordGenerator" />
+    <PackageReference Include="Stubble.Core" />
+    <PackageReference Include="WbImzo.Models" />
+    <PackageReference Include="WEBASE.Common.Utility" />
+    <PackageReference Include="WEBASE.Salary.Core" />
+    <PackageReference Include="WEBASE.Standard" />
+  </ItemGroup>
+  
+</Project>

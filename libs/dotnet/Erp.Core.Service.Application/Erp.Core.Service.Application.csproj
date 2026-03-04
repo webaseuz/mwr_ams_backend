@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" />
+		<PackageReference Include="WEBASE.Standard.i18n" />
+		<PackageReference Include="System.Linq.Dynamic.Core" />
+		<PackageReference Include="WEBASE.Standard.EntityFramework.Abstraction" />
+    <PackageReference Include="WEBASE.Standard.AppError.Abstraction" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Erp.Core.Service.Domain\Erp.Core.Service.Domain.csproj" />
+	</ItemGroup>
+</Project>

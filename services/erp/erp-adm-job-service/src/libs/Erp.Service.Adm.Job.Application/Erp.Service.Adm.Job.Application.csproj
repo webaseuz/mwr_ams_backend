@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core.Service.Application\Erp.Core.Service.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core\Erp.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core.Service.Domain\Erp.Core.Service.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-adm-service\src\libs\shared\Erp.Service.Adm.Models\Erp.Service.Adm.Models.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-adm-service\src\libs\shared\Erp.Service.Adm.Sdk\Erp.Service.Adm.Sdk.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-itg-service\src\proxy\libs\shared\Erp.Service.Itg.Proxy.Sdk\Erp.Service.Itg.Proxy.Sdk.csproj" />
+    <ProjectReference Include="..\Erp.Service.Adm.Job.Domain\Erp.Service.Adm.Job.Domain.csproj" />
+    <ProjectReference Include="..\shared\MessageBrokers\Erp.Service.Audit.MessageBroker\Erp.Service.Audit.MessageBroker.csproj" />
+    <ProjectReference Include="..\shared\MessageBrokers\MessageBroker.Adm.Abstraction\Erp.Service.Adm.MessageBroker.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" />
+    <PackageReference Include="EPPlus" />
+    <PackageReference Include="WEBASE.Standard.Storage.MinIO" />
+  </ItemGroup>
+
+</Project>

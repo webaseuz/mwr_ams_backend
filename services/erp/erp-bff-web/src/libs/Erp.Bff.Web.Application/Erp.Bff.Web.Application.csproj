@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WEBASE.Standard.i18n" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\erp-adm-service\src\libs\shared\Erp.Service.Adm.Models\Erp.Service.Adm.Models.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-adm-service\src\libs\shared\Erp.Service.Adm.Sdk\Erp.Service.Adm.Sdk.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-itg-service\src\proxy\libs\shared\Erp.Service.Itg.Proxy.Models\Erp.Service.Itg.Proxy.Models.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-itg-service\src\proxy\libs\shared\Erp.Service.Itg.Proxy.Sdk\Erp.Service.Itg.Proxy.Sdk.csproj" />
+    <ProjectReference Include="..\Erp.Adm.Bff.Web.Domain\Erp.Adm.Bff.Web.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,51 @@
+version: '3.9'
+services:
+
+  database:
+    image: postgres:latest
+    hostname: keycloak_db_host
+    container_name: keycloak_db_container
+    restart: always
+    environment:
+      POSTGRES_DB: keycloak_db
+      POSTGRES_USER: keycloak_db_user
+      POSTGRES_PASSWORD: keycloak_db_pass
+    ports:
+      - 5409:5432
+    volumes:
+      - keycloak_storage_volume:/var/lib/postgresql/data
+    networks:
+      - one
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest 
+    hostname: keycloak_server_host
+    container_name: keycloak_server_container
+    restart: always
+    environment:
+      KC_HEALTH_ENABLED: true
+      KC_METRICS_ENABLED: true
+      KC_BOOTSTRAP_ADMIN_USERNAME: keycloak_ui_admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: keycloak_ui_pass
+      KC_DB: postgres
+      KC_DB_USERNAME: keycloak_db_user
+      KC_DB_PASSWORD: keycloak_db_pass
+      KC_DB_URL_HOST: keycloak_db_host
+      KC_DB_URL_PORT: 5432
+      KC_DB_URL_DATABASE: keycloak_db
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    command:
+      - start-dev
+    networks:
+      - one
+
+volumes:
+  keycloak_storage_volume:
+    driver: local
+
+networks:
+  one:
+    driver: bridge

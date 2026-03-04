@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+		<PackageReference Include="Newtonsoft.Json" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+		<PackageReference Include="Stubble.Core" />
+		<PackageReference Include="Swashbuckle.AspNetCore" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+    <PackageReference Include="WEBASE.Standard.AppError.PostgreSQL" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Erp.Core.Service.Application\Erp.Core.Service.Application.csproj" />
+    <ProjectReference Include="..\Erp.Core.Service.Domain\Erp.Core.Service.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PersonsAddressHistory\**" />
+    <Compile Remove="PersonsAddress\**" />
+    <Compile Remove="PersonsHistory\**" />
+    <EmbeddedResource Remove="PersonsAddressHistory\**" />
+    <EmbeddedResource Remove="PersonsAddress\**" />
+    <EmbeddedResource Remove="PersonsHistory\**" />
+    <None Remove="PersonsAddressHistory\**" />
+    <None Remove="PersonsAddress\**" />
+    <None Remove="PersonsHistory\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" />
+    <PackageReference Include="WEBASE.Standard" />
+    <PackageReference Include="WEBASE.Standard.Storage.Abstraction" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Doc\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\libs\dotnet\Erp.Core.Models\Erp.Core.Sdk.Models.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\libs\dotnet\Erp.Core\Erp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

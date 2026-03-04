@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ide", "ide", "{63F1D318-BD8C-4F37-BF45-C92D6FF9B071}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Directory.Packages.props = ..\..\..\Directory.Packages.props
+		..\..\..\Nuget.Config = ..\..\..\Nuget.Config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ref", "ref", "{F7342383-358D-4D12-B424-7CE5BF0C0D40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37E5F89B-67F2-489F-9EFA-A295434B08C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{B30D7D91-672A-47F7-A687-C4A4A112600A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sdks", "sdks", "{C8BD5D7F-4706-43FC-8160-97940856D62F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Core", "..\..\..\libs\dotnet\Erp.Core\Erp.Core.csproj", "{DBC59960-BEB5-4EB7-89E0-2B65FD091081}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Core.Sdk", "..\..\..\libs\dotnet\Erp.Core.Sdk\Erp.Core.Sdk.csproj", "{1A4C519A-2B55-4906-A6B4-E1897DE6FF24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{14B8A4DF-386C-4DF1-9AF6-D720AF727444}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Bff.Web.WebApi", "src\Erp.Bff.Web.WebApi\Erp.Bff.Web.WebApi.csproj", "{70AEEEF9-BC7B-4F23-8A6D-17AC912A4F77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Bff.Web.Application", "src\libs\Erp.Bff.Web.Application\Erp.Bff.Web.Application.csproj", "{85AFC865-4778-47B2-B625-B7E8497A1EEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Bff.Web.Domain", "src\libs\Erp.Bff.Web.Domain\Erp.Bff.Web.Domain.csproj", "{A8DFD343-8288-4231-9379-00BA1B56E18F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erp.Bff.Web.Infrastructure", "src\libs\Erp.Bff.Web.Infrastructure\Erp.Bff.Web.Infrastructure.csproj", "{7AC814F9-3292-47A4-8DCC-B8B4B2686609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erp.Core.Models", "..\..\..\libs\dotnet\Erp.Core.Models\Erp.Core.Models.csproj", "{111431BD-F4FF-3F75-B1F1-4C76AA0EADC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBC59960-BEB5-4EB7-89E0-2B65FD091081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC59960-BEB5-4EB7-89E0-2B65FD091081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC59960-BEB5-4EB7-89E0-2B65FD091081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC59960-BEB5-4EB7-89E0-2B65FD091081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4C519A-2B55-4906-A6B4-E1897DE6FF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4C519A-2B55-4906-A6B4-E1897DE6FF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4C519A-2B55-4906-A6B4-E1897DE6FF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4C519A-2B55-4906-A6B4-E1897DE6FF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70AEEEF9-BC7B-4F23-8A6D-17AC912A4F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70AEEEF9-BC7B-4F23-8A6D-17AC912A4F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70AEEEF9-BC7B-4F23-8A6D-17AC912A4F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70AEEEF9-BC7B-4F23-8A6D-17AC912A4F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85AFC865-4778-47B2-B625-B7E8497A1EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85AFC865-4778-47B2-B625-B7E8497A1EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85AFC865-4778-47B2-B625-B7E8497A1EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85AFC865-4778-47B2-B625-B7E8497A1EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DFD343-8288-4231-9379-00BA1B56E18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DFD343-8288-4231-9379-00BA1B56E18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DFD343-8288-4231-9379-00BA1B56E18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DFD343-8288-4231-9379-00BA1B56E18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC814F9-3292-47A4-8DCC-B8B4B2686609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC814F9-3292-47A4-8DCC-B8B4B2686609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC814F9-3292-47A4-8DCC-B8B4B2686609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC814F9-3292-47A4-8DCC-B8B4B2686609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111431BD-F4FF-3F75-B1F1-4C76AA0EADC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111431BD-F4FF-3F75-B1F1-4C76AA0EADC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111431BD-F4FF-3F75-B1F1-4C76AA0EADC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111431BD-F4FF-3F75-B1F1-4C76AA0EADC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B30D7D91-672A-47F7-A687-C4A4A112600A} = {F7342383-358D-4D12-B424-7CE5BF0C0D40}
+		{C8BD5D7F-4706-43FC-8160-97940856D62F} = {F7342383-358D-4D12-B424-7CE5BF0C0D40}
+		{DBC59960-BEB5-4EB7-89E0-2B65FD091081} = {B30D7D91-672A-47F7-A687-C4A4A112600A}
+		{1A4C519A-2B55-4906-A6B4-E1897DE6FF24} = {B30D7D91-672A-47F7-A687-C4A4A112600A}
+		{14B8A4DF-386C-4DF1-9AF6-D720AF727444} = {37E5F89B-67F2-489F-9EFA-A295434B08C9}
+		{70AEEEF9-BC7B-4F23-8A6D-17AC912A4F77} = {37E5F89B-67F2-489F-9EFA-A295434B08C9}
+		{85AFC865-4778-47B2-B625-B7E8497A1EEF} = {14B8A4DF-386C-4DF1-9AF6-D720AF727444}
+		{A8DFD343-8288-4231-9379-00BA1B56E18F} = {14B8A4DF-386C-4DF1-9AF6-D720AF727444}
+		{7AC814F9-3292-47A4-8DCC-B8B4B2686609} = {14B8A4DF-386C-4DF1-9AF6-D720AF727444}
+		{111431BD-F4FF-3F75-B1F1-4C76AA0EADC7} = {B30D7D91-672A-47F7-A687-C4A4A112600A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C50F74B9-47B5-43F1-A089-C4B2AB300BD5}
+	EndGlobalSection
+EndGlobal

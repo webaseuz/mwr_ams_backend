@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UseCases\Doc\**" />
+    <Compile Remove="UseCases\GcpCitizen\**" />
+    <EmbeddedResource Remove="UseCases\Doc\**" />
+    <EmbeddedResource Remove="UseCases\GcpCitizen\**" />
+    <None Remove="UseCases\Doc\**" />
+    <None Remove="UseCases\GcpCitizen\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core.Service.Application\Erp.Core.Service.Application.csproj" />
+    <ProjectReference Include="..\Erp.Integration\Erp.Integration.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core\Erp.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-adm-job-service\src\libs\shared\MessageBrokers\Erp.Service.Audit.MessageBroker\Erp.Service.Audit.MessageBroker.csproj" />
+    <ProjectReference Include="..\..\..\..\erp-adm-job-service\src\libs\shared\MessageBrokers\MessageBroker.Adm.Abstraction\Erp.Service.Adm.MessageBroker.csproj" />
+    <ProjectReference Include="..\shared\Erp.Service.Adm.Models\Erp.Service.Adm.Models.csproj" />
+    <ProjectReference Include="..\Erp.Service.Adm.Domain\Erp.Service.Adm.Domain.csproj" />
+    <ProjectReference Include="..\shared\Erp.Service.Adm.Sdk\Erp.Service.Adm.Sdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" />
+    <PackageReference Include="EPPlus" />
+    <PackageReference Include="Quartz" />
+    <PackageReference Include="WEBASE.Standard.Storage.Abstraction" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UseCases\Document\Expense\Mapping\" />
+  </ItemGroup>
+
+</Project>

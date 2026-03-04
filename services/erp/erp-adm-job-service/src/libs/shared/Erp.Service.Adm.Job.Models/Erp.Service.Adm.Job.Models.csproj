@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="WEBASE.Standard" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Doc\" />
+    <Folder Include="PersonsAddressHistory\Commands\" />
+    <Folder Include="PersonsAddressHistory\Dtos\" />
+    <Folder Include="PersonsAddressHistory\Queries\" />
+    <Folder Include="PersonsAddress\Commands\" />
+    <Folder Include="PersonsAddress\Dtos\" />
+    <Folder Include="PersonsAddress\Queries\" />
+    <Folder Include="PersonsHistory\Commands\" />
+    <Folder Include="PersonsHistory\Dtos\" />
+    <Folder Include="PersonsHistory\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\libs\dotnet\Erp.Core.Service.Domain\Erp.Core.Service.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\libs\dotnet\Erp.Core\Erp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

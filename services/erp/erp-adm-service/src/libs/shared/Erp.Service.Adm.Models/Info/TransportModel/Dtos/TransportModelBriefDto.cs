@@ -1,0 +1,18 @@
+﻿namespace Erp.Service.Adm.Models;
+
+public class TransportModelBriefDto
+{
+    public int Id { get; set; }
+    public string OrderCode { get; set; }
+    public string ShortName { get; set; }
+    public string FullName { get; set; }
+    public int TransportTypeId { get; set; }
+    public string TransportTypeName { get; set; }
+    public int TransportBrandId { get; set; }
+    public string TransportBrandName { get; set; }
+    public int StateId { get; set; }
+    public string StateName { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? LastModifiedAt { get; set; }
+    public List<TransportModelTranslateDto> Translates { get; set; } = new();
+}

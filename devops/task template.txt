@@ -1,0 +1,17 @@
+devops registrydan repo ochish
+mad-erp-${app_name}-service
+mad-erp-${app_name}-bff-web
+mad-erp-${app_name}-front
+
+devops
+jenkinsga qo'shish 
+erp-${app_name}-service
+erp-${app_name}-bff-web
+erp-${app_name}-front
+
+backend
+erp-${app_name}-service service ko'tarish ${service_port} - ${app_name}_api
+erp-${app_name}-bff-web service ko'tarish ${bff_port} - ${app_name}_bff_web
+
+front 
+erp-${app_name}-front service ko'tarish

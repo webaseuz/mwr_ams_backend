@@ -1,0 +1,15 @@
+--> SERVICE.API
+5001 - adm_api
+
+--> JOB
+5101 - adm_job
+
+--> WEB.BFF
+5201 - adm_bff_web
+
+--> Mobile.BFF
+5301 - adm_bff_mobile
+
+--> Desktop.BFF
+5401 - adm_bff_desktop
+

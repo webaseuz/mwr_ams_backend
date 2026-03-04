@@ -1,0 +1,13 @@
+﻿namespace Erp.Service.Adm.Models;
+
+public class TransportTypeDto
+{
+    public int Id { get; set; }
+    public string? OrderCode { get; set; }
+    public string ShortName { get; set; }
+    public string FullName { get; set; }
+    public int StateId { get; set; }
+    public string? StateName { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public List<TransportTypeTranslateDto> Translates { get; set; } = new();
+}

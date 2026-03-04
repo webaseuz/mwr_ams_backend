@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCoreRateLimit" />
+    <PackageReference Include="WEBASE.Standard.AppError.AspNet" />
+    <PackageReference Include="WEBASE.Standard.AspNet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\erp-itg-service\src\proxy\libs\shared\Erp.Service.Itg.Proxy.Sdk\Erp.Service.Itg.Proxy.Sdk.csproj" />
+    <ProjectReference Include="..\libs\Erp.Service.Adm.Job.Infrastructure\Erp.Service.Adm.Job.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AppData\Templates\ru\Foydalanuvchilar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\ru\Rollar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\ru\Tashkilot_hisoboti.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\ru\Tashkilotlar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_cyrl\Foydalanuvchilar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_cyrl\Rollar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_cyrl\Tashkilot_hisoboti.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_cyrl\Tashkilotlar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_latn\Foydalanuvchilar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_latn\Rollar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_latn\Tashkilot_hisoboti.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AppData\Templates\uz_latn\Tashkilotlar.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AppData\Csv\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
+</Project>

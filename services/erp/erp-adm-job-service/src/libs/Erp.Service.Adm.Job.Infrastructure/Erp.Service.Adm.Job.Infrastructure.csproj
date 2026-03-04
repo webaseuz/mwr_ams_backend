@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core.Service.Infrastructure\Erp.Core.Service.Infrastructure.csproj" />
+    <ProjectReference Include="..\Erp.Service.Adm.Job.Application\Erp.Service.Adm.Job.Application.csproj" />
+    <ProjectReference Include="..\shared\MessageBrokers\Erp.Service.Audit.RabbitMQ\Erp.Service.Audit.RabbitMQ.csproj" />
+    <ProjectReference Include="..\shared\MessageBrokers\MessageBroker.Adm.RabbitMQ\Erp.Service.Adm.RabbitMQ.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Security\" />
+  </ItemGroup>
+
+</Project>

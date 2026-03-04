@@ -1,0 +1,3 @@
+erp-adm-api
+erp-adm-bff
+erp-adm-job

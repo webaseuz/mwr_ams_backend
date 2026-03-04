@@ -1,0 +1,1 @@
+create database mad_erp;

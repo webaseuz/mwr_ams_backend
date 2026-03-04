@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core.Service.Domain\Erp.Core.Service.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\libs\dotnet\Erp.Core\Erp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

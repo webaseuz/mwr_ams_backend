@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\libs\dotnet\Erp.Core.Sdk\Erp.Core.Sdk.csproj" />
+    <ProjectReference Include="..\Erp.Service.Adm.Job.Models\Erp.Service.Adm.Job.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\Doc\" />
+  </ItemGroup>
+
+</Project>

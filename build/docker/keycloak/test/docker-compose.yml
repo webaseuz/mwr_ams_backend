@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.2.0
+    hostname: keycloak_server_host
+    container_name: keycloak_server_container
+    restart: always
+    environment:
+      KC_HEALTH_ENABLED: true
+      KC_METRICS_ENABLED: true
+      KC_BOOTSTRAP_ADMIN_USERNAME: keycloak_ui_admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: keycloak_ui_pass
+      KC_DB: postgres
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: D0ntT0uchThi$
+      KC_DB_URL_HOST: host.docker.internal
+      KC_DB_URL_PORT: 1101
+      KC_DB_URL_DATABASE: keycloak
+    ports:
+      - "8080:8080"
+    command:
+      - start-dev

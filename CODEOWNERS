@@ -1,0 +1,16 @@
+# Team Leader
+*               @fayozxon-maxmudov
+
+# Critical File Changes (Documentation, Project Files, Configurations)
+/.github/*       @utkirbeksobirjonov @shamsiddintajbaev
+/libs/*          @utkirbeksobirjonov
+
+# Project files
+*.props         @utkirbeksobirjonov
+*.csproj        @utkirbeksobirjonov
+
+# Configuration files
+*.Config        @utkirbeksobirjonov
+
+# Security-related Files
+CODEOWNERS      @utkirbeksobirjonov

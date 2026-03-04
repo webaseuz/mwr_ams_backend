@@ -1,0 +1,37 @@
+version: "3.9"
+services:
+  coordinator:
+    container_name: coordinator
+    image: citusdata/citus:latest
+    ports:
+      - "5400:5432"
+    environment:
+      POSTGRES_USER: sys_user
+      POSTGRES_PASSWORD: sys_pass
+      POSTGRES_DB: postgres
+    volumes:
+      - coordinator-volume:/var/lib/postgresql/data
+    networks:
+      - db-netw
+
+  worker:
+    container_name: worker
+    image: citusdata/citus:latest
+    ports:
+      - "5401:5432"
+    environment:
+      POSTGRES_USER: sys_user
+      POSTGRES_PASSWORD: sys_pass
+      POSTGRES_DB: postgres
+    volumes:
+      - worker-volume:/var/lib/postgresql/data
+    networks:
+      - db-netw
+
+networks:
+  db-netw:
+    driver: bridge
+
+volumes:
+  coordinator-volume:
+  worker-volume:

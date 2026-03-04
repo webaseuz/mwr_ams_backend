@@ -1,0 +1,19 @@
+﻿using WEBASE;
+
+namespace Erp.Service.Adm.Job.Models;
+public class EduYearSelectListDto : WbSelectListItem<int>
+{
+    public int Id { get; set; }
+    public string Code { get; set; }
+    public string ShortName { get; set; }
+    public string FullName { get; set; }
+    public int? CurrentYear { get; set; }
+    public int? Adm.JobissionYear { get; set; }
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
+    public int? PreviousYearId { get; set; }
+    public int? Allowed { get; set; }
+    public int StateId { get; set; }
+    public string State { get; set; }
+
+}
