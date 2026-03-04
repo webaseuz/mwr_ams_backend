@@ -43,7 +43,7 @@ Echo ----- docker logout stage.
 docker logout
 
 Echo ----- docker login stage.
-docker login -u webaseuz -p glpat-p2huFzGxLy2FEstLNP6X registry.webase.uz
+docker login -u {username} -p {password} registry.webase.uz
 
 
 Echo ---- Docker push image... 
