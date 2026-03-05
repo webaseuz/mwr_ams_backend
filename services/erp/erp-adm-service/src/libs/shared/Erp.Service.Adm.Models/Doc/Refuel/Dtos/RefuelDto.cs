@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-using WEBASE.Helpers;
 
 namespace Erp.Service.Adm.Models;
 
@@ -7,7 +5,6 @@ public class RefuelDto
 {
     public long Id { get; set; }
     public string DocNumber { get; set; } = null!;
-    [JsonConverter(typeof(WbDateConverter))]
     public DateTime DocDate { get; set; }
     public int FuelCardId { get; set; }
     public string FuelCardNumber { get; set; }

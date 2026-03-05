@@ -3,6 +3,7 @@ using Erp.Core.Service.Application;
 using Erp.Service.Adm.Models;
 using MediatR;
 using WEBASE;
+using WEBASE.EntityFramework.Abstraction;
 using WEBASE.i18n;
 
 namespace Erp.Service.Adm.Application.UseCases;
@@ -35,6 +36,6 @@ public class GetTransportBriefPagedResultHandler(
                 x.TransportColorName.ToLower().Contains(search));
         }
 
-        return await query.AsPagedResultAsync(request, cancellationToken);
+        return await query.AsPagedResultAsync(request);
     }
 }

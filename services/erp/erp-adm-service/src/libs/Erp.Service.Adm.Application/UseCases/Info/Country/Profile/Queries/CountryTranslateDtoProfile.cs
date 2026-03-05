@@ -9,6 +9,6 @@ public class CountryTranslateDtoProfile : Profile
     public CountryTranslateDtoProfile()
     {
         CreateMap<CountryTranslate, CountryTranslateDto>()
-            .ForMember(src => src.LanguageName, conf => conf.MapFrom(ent => ent.Language.FullName));
+            .ForMember(src => src.Language, conf => conf.MapFrom(ent => ent.Language.FullName));
     }
 }

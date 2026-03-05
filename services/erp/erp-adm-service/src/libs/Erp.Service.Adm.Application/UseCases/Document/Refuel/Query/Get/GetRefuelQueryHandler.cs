@@ -14,7 +14,7 @@ internal sealed class GetRefuelQueryHandler(IMainAuthService authService) : IReq
         {
             DocDate = DateTime.Today,
             BranchId = userInfo.BranchId,
-            CanCreateForAllBranch = authService.HasPermission(nameof(PermissionCode.RefuelViewAll))
+            CanCreateForAllBranch = authService.HasPermission(nameof(AdmPermissionCode.RefuelViewAll))
         };
         return Task.FromResult(dto);
     }

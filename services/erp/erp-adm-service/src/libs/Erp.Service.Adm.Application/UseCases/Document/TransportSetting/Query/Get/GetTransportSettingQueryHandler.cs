@@ -15,7 +15,7 @@ internal sealed class GetTransportSettingQueryHandler(
         {
             DocDate = DateTime.Today,
             BranchId = userInfo.BranchId ?? 0,
-            CanCreateForAllBranch = authService.HasPermission(nameof(PermissionCode.TransportSettingViewAll))
+            CanCreateForAllBranch = authService.HasPermission(nameof(AdmPermissionCode.TransportSettingViewAll))
         };
         return Task.FromResult(dto);
     }

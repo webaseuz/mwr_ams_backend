@@ -50,7 +50,7 @@ public class UserAuthModel : IUserAuthModel
                 AdmPermissionCode.RegionView.ToString(),
                 AdmPermissionCode.DistrictView.ToString(),
                 //AdmPermissionCode.SectorView.ToString(),
-                AdmPermissionCode.MfyView.ToString(),
+                //AdmPermissionCode.MfyView.ToString(),
                 AdmPermissionCode.OrganizationView.ToString()
             };
     }

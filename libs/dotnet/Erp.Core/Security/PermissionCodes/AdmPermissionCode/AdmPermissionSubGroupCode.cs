@@ -2,7 +2,7 @@
 
 namespace Erp.Core;
 
-public enum AdmPermissionSubGroupCode
+/*public enum AdmPermissionSubGroupCode
 {
     #region SYSTEM
 
@@ -331,177 +331,177 @@ public enum AdmPermissionSubGroupCode
     [WbTranslate(LanguageIdConst.RU, "Кадастровые свидетельства организаций")]
     [WbTranslate(LanguageIdConst.EN, "Organization Cadastre Certificates")]
     OrganizationCadastreCertificate
-}
+}*/
 
-public enum PermissionSubGroupCode
+public enum AdmPermissionSubGroupCode
 {
     #region INFO
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РЎС‚СЂР°РЅР°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р”Р°РІР»Р°С‚")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Страна")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Давлат")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Davlat")]
-    [WbTranslate(LanguageIdConst.RU, "РЎС‚СЂР°РЅР°")]
+    [WbTranslate(LanguageIdConst.RU, "Страна")]
     [WbTranslate(LanguageIdConst.EN, "Country")]
     Country,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р‘Р°РЅРє")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°РЅРє")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Банк")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Банк")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bank")]
-    [WbTranslate(LanguageIdConst.RU, "Р‘Р°РЅРє")]
+    [WbTranslate(LanguageIdConst.RU, "Банк")]
     [WbTranslate(LanguageIdConst.EN, "Bank")]
     Bank,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р’Р°Р»СЋС‚Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р’Р°Р»СЋС‚Р°")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Валюта")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Валюта")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Valyuta")]
-    [WbTranslate(LanguageIdConst.RU, "Р’Р°Р»СЋС‚Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Валюта")]
     [WbTranslate(LanguageIdConst.EN, "Currency")]
     Currency,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї С‚РѕРїР»РёРІР°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЃТ›РёР»Т“Рё С‚СѓСЂРё")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "YoqilgвЂi turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї С‚РѕРїР»РёРІР°")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип топлива")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ёқилғи тури")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Yoqilg‘i turi")]
+    [WbTranslate(LanguageIdConst.RU, "Тип топлива")]
     [WbTranslate(LanguageIdConst.EN, "Fuel type")]
     FuelType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї СЃС‚СЂР°С…РѕРІР°РЅРёСЏ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЎСѓТ“СѓСЂС‚Р° С‚СѓСЂРё")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "SugвЂurta turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї СЃС‚СЂР°С…РѕРІР°РЅРёСЏ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип страхования")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Суғурта тури")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Sug‘urta turi")]
+    [WbTranslate(LanguageIdConst.RU, "Тип страхования")]
     [WbTranslate(LanguageIdConst.EN, "Insurance type")]
     InsuranceType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р“СЂР°Р¶РґР°РЅСЃС‚РІРѕ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤СѓРєРѕСЂРѕР»РёРє")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Гражданство")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Фукоролик")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Fuqorolik")]
-    [WbTranslate(LanguageIdConst.RU, "Р“СЂР°Р¶РґР°РЅСЃС‚РІРѕ")]
+    [WbTranslate(LanguageIdConst.RU, "Гражданство")]
     [WbTranslate(LanguageIdConst.EN, "Citizenship")]
     Citizenship,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї РјРµРґРёС†РёРЅСЃРєРѕР№ СѓСЃР»СѓРіРё")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўРёР±Р±РёР№ С…РёР·РјР°С‚ С‚СѓСЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип медицинской услуги")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Тиббий хизмат тури")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tibbiy xizmat turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї РјРµРґРёС†РёРЅСЃРєРѕР№ СѓСЃР»СѓРіРё")]
+    [WbTranslate(LanguageIdConst.RU, "Тип медицинской услуги")]
     [WbTranslate(LanguageIdConst.EN, "ServiceType")]
     ServiceType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РќР°С†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РњРёР»Р»Р°С‚Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Национальность")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Миллати")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Millati")]
-    [WbTranslate(LanguageIdConst.RU, "РќР°С†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Национальность")]
     [WbTranslate(LanguageIdConst.EN, "Nationality")]
     Nationality,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р Р°Р№РѕРЅ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСѓРјР°РЅ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Район")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Туман")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tuman")]
-    [WbTranslate(LanguageIdConst.RU, "Р Р°Р№РѕРЅ")]
+    [WbTranslate(LanguageIdConst.RU, "Район")]
     [WbTranslate(LanguageIdConst.EN, "District")]
     District,
 
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РћСЂРіР°РЅРёР·Р°С†РёСЏ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°С€РєРёР»РѕС‚")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Организация")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ташкилот")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tashkilot")]
-    [WbTranslate(LanguageIdConst.RU, "РћСЂРіР°РЅРёР·Р°С†РёСЏ")]
+    [WbTranslate(LanguageIdConst.RU, "Организация")]
     [WbTranslate(LanguageIdConst.EN, "Organization")]
     Organization,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РћР±Р»Р°СЃС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р’РёР»РѕСЏС‚")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Область")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Вилоят")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Viloyat")]
-    [WbTranslate(LanguageIdConst.RU, "РћР±Р»Р°СЃС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Область")]
     [WbTranslate(LanguageIdConst.EN, "Region")]
     Region,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї Р±Р°С‚Р°СЂРµРё")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РђРєСѓРјР»СЏС‚РѕСЂ С‚СѓСЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип батареи")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Акумлятор тури")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Akumlyator turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї Р±Р°С‚Р°СЂРµРё")]
+    [WbTranslate(LanguageIdConst.RU, "Тип батареи")]
     [WbTranslate(LanguageIdConst.EN, "BatteryType")]
     BatteryType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РљРѕРЅС‚СЂР°РєС‚РѕСЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљРѕРЅС‚СЂР°РєС‚РѕСЂ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Контрактор")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Контрактор")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Kontraktor")]
-    [WbTranslate(LanguageIdConst.RU, "РљРѕРЅС‚СЂР°РєС‚РѕСЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Контрактор")]
     [WbTranslate(LanguageIdConst.EN, "Contractor")]
     Contractor,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўСЂР°РЅСЃРїРѕСЂС‚РЅР°СЏ РјР°СЂРєР°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚ Р±СЂРµРЅРґРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Транспортная марка")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт бренди")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport brendi")]
-    [WbTranslate(LanguageIdConst.RU, "РўСЂР°РЅСЃРїРѕСЂС‚РЅР°СЏ РјР°СЂРєР°")]
+    [WbTranslate(LanguageIdConst.RU, "Транспортная марка")]
     [WbTranslate(LanguageIdConst.EN, "TransportBrand")]
     TransportBrand,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р¦РІРµС‚ С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚ СЂР°РЅРіРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Цвет транспорта")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт ранги")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport rangi")]
-    [WbTranslate(LanguageIdConst.RU, "Р¦РІРµС‚ С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Цвет транспорта")]
     [WbTranslate(LanguageIdConst.EN, "TransportColor")]
     TransportColor,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚ С‚СѓСЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип транспорта")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт тури")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Тип транспорта")]
     [WbTranslate(LanguageIdConst.EN, "TransportType")]
     TransportType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚РґР°РЅ С„РѕР№РґР°Р»Р°РЅРёС€ С‚СѓСЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип использования транспорта")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспортдан фойдаланиш тури")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transportdan foydalanish turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Тип использования транспорта")]
     [WbTranslate(LanguageIdConst.EN, "TransportUseType")]
     TransportUseType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РњРѕРґРµР»СЊ С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚ РјРѕРґРµР»Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Модель транспорта")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт модели")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport modeli")]
-    [WbTranslate(LanguageIdConst.RU, "РњРѕРґРµР»СЊ С‚СЂР°РЅСЃРїРѕСЂС‚Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Модель транспорта")]
     [WbTranslate(LanguageIdConst.EN, "TransportModel")]
     TransportModel,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї РјР°СЃР»Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЃТ“ С‚СѓСЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип масла")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ёғ тури")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yog' turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї РјР°СЃР»Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Тип масла")]
     [WbTranslate(LanguageIdConst.EN, "Oil Type")]
     OilType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РњРѕРґРµР»СЊ РјР°СЃР»Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЃТ“ РјРѕРґРµР»Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Модель масла")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ёғ модели")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yog' modeli")]
-    [WbTranslate(LanguageIdConst.RU, "РњРѕРґРµР»СЊ РјР°СЃР»Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Модель масла")]
     [WbTranslate(LanguageIdConst.EN, "Oil Model")]
     OilModel,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РњРѕРґРµР»СЊ С€РёРЅС‹")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЁРёРЅР° РјРѕРґРµР»Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Модель шины")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Шина модели")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Shina modeli")]
-    [WbTranslate(LanguageIdConst.RU, "РњРѕРґРµР»СЊ С€РёРЅС‹")]
+    [WbTranslate(LanguageIdConst.RU, "Модель шины")]
     [WbTranslate(LanguageIdConst.EN, "Tire Model")]
     TireModel,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРёРї Р¶РёРґРєРѕСЃС‚Рё")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЃРєРёР»РіРё С‚СѓСЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Тип жидкости")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ёкилги тури")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yoqilg'i turi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРёРї Р¶РёРґРєРѕСЃС‚Рё")]
+    [WbTranslate(LanguageIdConst.RU, "Тип жидкости")]
     [WbTranslate(LanguageIdConst.EN, "Liquid Type")]
     LiquidType,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р Р°Р·РјРµСЂ С€РёРЅ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЁРёРЅР° СћР»С‡Р°РјРё")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "Shina oвЂlchami")]
-    [WbTranslate(LanguageIdConst.RU, "Р Р°Р·РјРµСЂ С€РёРЅ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Размер шин")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Шина ўлчами")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Shina o‘lchami")]
+    [WbTranslate(LanguageIdConst.RU, "Размер шин")]
     [WbTranslate(LanguageIdConst.EN, "Tire Size")]
     TireSize,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р’РµСЂСЃРёСЏ РјРѕР±РёР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РњРѕР±РёР» РёР»РѕРІР° РІРµСЂСЃРёСЏСЃРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Версия мобильного приложения")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Мобил илова версияси")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Mobil ilova versiyasi")]
-    [WbTranslate(LanguageIdConst.RU, "Р’РµСЂСЃРёСЏ РјРѕР±РёР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ")]
+    [WbTranslate(LanguageIdConst.RU, "Версия мобильного приложения")]
     [WbTranslate(LanguageIdConst.EN, "Mobile App Version")]
     MobileAppVersion,
     #endregion
@@ -509,111 +509,111 @@ public enum PermissionSubGroupCode
     #region HL
 
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РћС‚РґРµР»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘СћР»РёРј")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Отдел")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бўлим")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bo'lim")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РґРµР»")]
+    [WbTranslate(LanguageIdConst.RU, "Отдел")]
     [WbTranslate(LanguageIdConst.EN, "Department")]
     Department,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РџРѕР·РёС†РёСЏ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р›Р°РІРѕР·РёРј")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Позиция")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Лавозим")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Lavozim")]
-    [WbTranslate(LanguageIdConst.RU, "РџРѕР·РёС†РёСЏ")]
+    [WbTranslate(LanguageIdConst.RU, "Позиция")]
     [WbTranslate(LanguageIdConst.EN, "Position")]
     Position,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РџРµСЂСЃРѕРЅР°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЁР°С…СЃ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Персона")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Шахс")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Shaxs")]
-    [WbTranslate(LanguageIdConst.RU, "РџРµСЂСЃРѕРЅР°")]
+    [WbTranslate(LanguageIdConst.RU, "Персона")]
     [WbTranslate(LanguageIdConst.EN, "Person")]
     Person,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўСЂР°РЅСЃРїРѕСЂС‚")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Транспорт")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport")]
-    [WbTranslate(LanguageIdConst.RU, "РўСЂР°РЅСЃРїРѕСЂС‚")]
+    [WbTranslate(LanguageIdConst.RU, "Транспорт")]
     [WbTranslate(LanguageIdConst.EN, "Transport")]
     Transport,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРѕРїР»РёРІРЅР°СЏ РєР°СЂС‚Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЃТ›РёР»Т“Рё РєР°СЂС‚Р°СЃРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Топливная карта")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ёқилғи картаси")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yoqilg'i kartasi")]
-    [WbTranslate(LanguageIdConst.RU, "РўРѕРїР»РёРІРЅР°СЏ РєР°СЂС‚Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Топливная карта")]
     [WbTranslate(LanguageIdConst.EN, "Fuel Card")]
     FuelCard,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р’РѕРґРёС‚РµР»СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°Р№РґРѕРІС‡Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Водитель")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳайдовчи")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Haydovchi")]
-    [WbTranslate(LanguageIdConst.RU, "Р’РѕРґРёС‚РµР»СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Водитель")]
     [WbTranslate(LanguageIdConst.EN, "Driver")]
     Driver,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Р¤РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤РёР»РёР°Р»")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Филиал")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Filial")]
-    [WbTranslate(LanguageIdConst.RU, "Р¤РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Филиал")]
     [WbTranslate(LanguageIdConst.EN, "Branch")]
     Branch,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРµРєСѓС‰Р°СЏ Р»РѕРєР°С†РёСЏ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р–РѕСЂРёР№ Р¶РѕР№Р»Р°С€СѓРІ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Текущая локация")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Жорий жойлашув")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Joriy joylashuv")]
-    [WbTranslate(LanguageIdConst.RU, "РўРµРєСѓС‰Р°СЏ Р»РѕРєР°С†РёСЏ")]
+    [WbTranslate(LanguageIdConst.RU, "Текущая локация")]
     [WbTranslate(LanguageIdConst.EN, "Present Location")]
     PresentTrackingInfo,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РСЃС‚РѕСЂРёСЏ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёР№")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р–РѕР№Р»Р°С€СѓРІ С‚Р°СЂРёС…Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "История местоположений")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Жойлашув тарихи")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Joylashuv tarixi")]
-    [WbTranslate(LanguageIdConst.RU, "РСЃС‚РѕСЂРёСЏ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёР№")]
+    [WbTranslate(LanguageIdConst.RU, "История местоположений")]
     [WbTranslate(LanguageIdConst.EN, "The history is mestopologenic")]
     TrackingInfo,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РЈРІРµРґРѕРјР»РµРЅРёРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РёР»РґРёСЂРёС€РЅРѕРјР°")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Уведомление")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Билдиришнома")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bildirishnoma")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРІРµРґРѕРјР»РµРЅРёРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Уведомление")]
     [WbTranslate(LanguageIdConst.EN, "Notification")]
     Notification,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "РўРµРєСѓС‰РµРµ СѓРІРµРґРѕРјР»РµРЅРёРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РњР°РІР¶СѓРґ Р±РёР»РґРёСЂРёС€РЅРѕРјР°")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.MANUALS, "Текущее уведомление")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Мавжуд билдиришнома")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Mavjud bildirishnoma")]
-    [WbTranslate(LanguageIdConst.RU, "РўРµРєСѓС‰РµРµ СѓРІРµРґРѕРјР»РµРЅРёРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Текущее уведомление")]
     [WbTranslate(LanguageIdConst.EN, "Present Notification")]
     PresentNotification,
 
     #endregion
 
     #region DOC
-    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "РќР°СЃС‚СЂРѕР№РєРё С‚СЂР°РЅСЃРїРѕСЂС‚")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚ СЃРѕР·Р»Р°РјР°Р»Р°СЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "Настройки транспорт")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт созламалари")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport sozlamalari")]
-    [WbTranslate(LanguageIdConst.RU, "РќР°СЃС‚СЂРѕР№РєРё С‚СЂР°РЅСЃРїРѕСЂС‚")]
+    [WbTranslate(LanguageIdConst.RU, "Настройки транспорт")]
     [WbTranslate(LanguageIdConst.EN, "Transport settings")]
     TransportSetting,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "Р—Р°РїСЂР°РІРєР°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЃТ›РёР»Т“Рё Т›СѓР№РёС€")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "Заправка")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ёқилғи қуйиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yoqilg'i quyish")]
-    [WbTranslate(LanguageIdConst.RU, "Р—Р°РїСЂР°РІРєР°")]
+    [WbTranslate(LanguageIdConst.RU, "Заправка")]
     [WbTranslate(LanguageIdConst.EN, "Refueling")]
     Refuel,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "Р Р°СЃС…РѕРґС‹ РЅР° С‚СЂР°РЅСЃРїРѕСЂС‚")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўСЂР°РЅСЃРїРѕСЂС‚ С…Р°СЂР°Р¶Р°С‚Р»Р°СЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "Расходы на транспорт")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Транспорт харажатлари")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Transport xarajatlari")]
-    [WbTranslate(LanguageIdConst.RU, "Р Р°СЃС…РѕРґС‹ РЅР° С‚СЂР°РЅСЃРїРѕСЂС‚")]
+    [WbTranslate(LanguageIdConst.RU, "Расходы на транспорт")]
     [WbTranslate(LanguageIdConst.EN, "Transport expenses")]
     Expense,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "РќР°СЃС‚СЂРѕР№РєРё С€Р°Р±Р»РѕРЅР° СѓРІРµРґРѕРјР»РµРЅРёР№")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РёР»РґРёСЂРёС€РЅРѕРјР° С€Р°Р±Р»РѕРЅРё СЃРѕР·Р»Р°РјР°Р»Р°СЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.DOCUMENTS, "Настройки шаблона уведомлений")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Билдиришнома шаблони созламалари")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bildirishnoma shabloni sozlamalari")]
-    [WbTranslate(LanguageIdConst.RU, "РќР°СЃС‚СЂРѕР№РєРё С€Р°Р±Р»РѕРЅР° СѓРІРµРґРѕРјР»РµРЅРёР№")]
+    [WbTranslate(LanguageIdConst.RU, "Настройки шаблона уведомлений")]
     [WbTranslate(LanguageIdConst.EN, "Notification Template Setting")]
     NotificationTemplateSetting,
 
@@ -621,50 +621,50 @@ public enum PermissionSubGroupCode
 
     #region SYS
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.SYSTEM, "Р РѕР»СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р РѕР»СЊ")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.SYSTEM, "Роль")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Роль")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Rol")]
-    [WbTranslate(LanguageIdConst.RU, "Р РѕР»СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Роль")]
     [WbTranslate(LanguageIdConst.EN, "Role")]
     Role,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.SYSTEM, "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤РѕР№РґР°Р»Р°РЅСѓРІС‡Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.SYSTEM, "Пользователь")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Фойдаланувчи")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Foydalanuvchi")]
-    [WbTranslate(LanguageIdConst.RU, "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Пользователь")]
     [WbTranslate(LanguageIdConst.EN, "User")]
     User,
     #endregion
 
     #region REPORT
-    [WbPermissionSubGroupField(PermissionGroupIdConst.REPORTS, "РЁС‚СЂР°С„С‹ РІРѕРґРёС‚РµР»РµР№")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°Р№РґРѕРІС‡Рё Р¶Р°СЂРёРјР°Р»Р°СЂРё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.REPORTS, "Штрафы водителей")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳайдовчи жарималари")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Haydovchi jarimalari")]
-    [WbTranslate(LanguageIdConst.RU, "РЁС‚СЂР°С„С‹ РІРѕРґРёС‚РµР»РµР№")]
+    [WbTranslate(LanguageIdConst.RU, "Штрафы водителей")]
     [WbTranslate(LanguageIdConst.EN, "Driver penalties")]
     DriverPenalty,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.REPORTS, "РћРїС‚РёРјР°Р»СЊРЅС‹Р№ РјР°СЂС€СЂСѓС‚")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р­РЅРі Т›СѓР»Р°Р№ Р№СћРЅР°Р»РёС€")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.REPORTS, "Оптимальный маршрут")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Энг қулай йўналиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Eng qulay yo'nalish")]
-    [WbTranslate(LanguageIdConst.RU, "РћРїС‚РёРјР°Р»СЊРЅС‹Р№ РјР°СЂС€СЂСѓС‚")]
+    [WbTranslate(LanguageIdConst.RU, "Оптимальный маршрут")]
     [WbTranslate(LanguageIdConst.EN, "Optimal route")]
     OptimalRoute,
 
-    [WbPermissionSubGroupField(PermissionGroupIdConst.REPORTS, "РћС‚С‡РµС‚ Рѕ СЂР°СЃС…РѕРґР°С…")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РҐР°СЂР°Р¶Р°С‚Р»Р°СЂ ТіРёСЃРѕР±РѕС‚Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.REPORTS, "Отчет о расходах")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Харажатлар ҳисоботи")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Xarajatlar hisoboti")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚С‡РµС‚ Рѕ СЂР°СЃС…РѕРґР°С…")]
+    [WbTranslate(LanguageIdConst.RU, "Отчет о расходах")]
     [WbTranslate(LanguageIdConst.EN, "Expense report")]
     ExpenseReport,
 
     #endregion
 
     #region FOR_DEVELOPERS
-    [WbPermissionSubGroupField(PermissionGroupIdConst.SYSTEM, "Р Р°Р·СЂР°Р±РѕС‚С‡РёРє")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р”Р°СЃС‚СѓСЂС‡Рё")]
+    [WbPermissionSubGroupField(PermissionGroupIdConst.SYSTEM, "Разработчик")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Дастурчи")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Dasturchi")]
-    [WbTranslate(LanguageIdConst.RU, "Р Р°Р·СЂР°Р±РѕС‚С‡РёРє")]
+    [WbTranslate(LanguageIdConst.RU, "Разработчик")]
     [WbTranslate(LanguageIdConst.EN, "Developer")]
     Developer
     #endregion

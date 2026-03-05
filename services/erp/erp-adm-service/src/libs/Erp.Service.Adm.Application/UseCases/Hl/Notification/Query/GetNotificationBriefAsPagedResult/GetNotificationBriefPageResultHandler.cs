@@ -4,8 +4,8 @@ using Erp.Core.Service.Application;
 using Erp.Service.Adm.Models;
 using MediatR;
 using WEBASE;
-using WEBASE.AutoMapper;
-using WEBASE.Culture;
+using WEBASE.EntityFramework.Abstraction;
+using WEBASE.i18n;
 
 namespace Erp.Service.Adm.Application.UseCases;
 
@@ -31,7 +31,7 @@ public class GetNotificationBriefPageResultHandler : IRequestHandler<Notificatio
     public async Task<WbPagedResult<NotificationBriefDto>> Handle(NotificationGetListQuery request, CancellationToken cancellationToken)
     {
         var userInfo = _authService.User;
-        var hasViewAll = userInfo.Permissions.Contains(nameof(PermissionCode.AllNotificationView));
+        var hasViewAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllNotificationView));
 
         var query = _context.Notifications
             .MapTo<NotificationBriefDto>(_mapper, _cultureHelper);
@@ -51,6 +51,6 @@ public class GetNotificationBriefPageResultHandler : IRequestHandler<Notificatio
         if (!string.IsNullOrWhiteSpace(request.Search))
             query = query.Where(x => x.Subject.ToLower().Contains(request.Search.ToLower()));
 
-        return await query.AsPagedResultAsync(request, cancellationToken);
+        return await query.AsPagedResultAsync(request);
     }
 }

@@ -21,7 +21,7 @@ public class GetExpenseQueryHandler :
         newDto.BranchId = userInfo.BranchId;
         newDto.DocDate = DateTime.Now;
 
-        newDto.CanCreateForAllBranch = _authService.HasPermission(nameof(PermissionCode.AllViewExpense));
+        newDto.CanCreateForAllBranch = _authService.HasPermission(nameof(AdmPermissionCode.AllViewExpense));
 
         return await Task.FromResult(newDto);
     }

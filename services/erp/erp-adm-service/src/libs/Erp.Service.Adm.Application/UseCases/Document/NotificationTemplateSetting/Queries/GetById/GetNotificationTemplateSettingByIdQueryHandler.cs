@@ -37,7 +37,7 @@ internal sealed class GetNotificationTemplateSettingByIdQueryHandler(
                     ErrorMessage = localizationBuilder.For("DOCUMENT_NOT_FOUND").WithData(new { Id = request.Id }).ToString()
                 });
 
-        dto.CanCreateForAllBranch = authService.HasPermission(nameof(PermissionCode.NotificationTemplateSettingCreateForAllBranch));
+        dto.CanCreateForAllBranch = authService.HasPermission(nameof(AdmPermissionCode.NotificationTemplateSettingCreateForAllBranch));
 
         return dto;
     }

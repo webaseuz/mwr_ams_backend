@@ -1,10 +1,11 @@
 using AutoMapper;
 using Erp.Core.Service.Application;
-using Erp.Core.Service.Application.Mapping;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;
 using MediatR;
 using WEBASE;
+using WEBASE.EntityFramework.Abstraction;
+using WEBASE.i18n;
 
 namespace Erp.Service.Adm.Application.UseCases;
 
@@ -40,6 +41,6 @@ public class GetPersonBriefPagedResultHandler : IRequestHandler<PersonGetListQue
                 x.LastName.ToLower().Contains(search));
         }
 
-        return await query.AsPagedResultAsync(request, cancellationToken);
+        return await query.AsPagedResultAsync(request);
     }
 }

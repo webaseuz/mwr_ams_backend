@@ -14,7 +14,7 @@ internal sealed class GetFuelCardSelectListQueryHandler(IApplicationDbContext co
     {
         var userInfo = authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(PermissionCode.FuelCardViewAll)))
+        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.FuelCardViewAll)))
             request.BranchId = userInfo.BranchId;
 
         if (request.TransportSettingId.HasValue)

@@ -1,4 +1,4 @@
-﻿using Erp.Core.Sdk.Models;
+﻿using Erp.Core;
 
 namespace Erp.Service.Adm.Models;
 

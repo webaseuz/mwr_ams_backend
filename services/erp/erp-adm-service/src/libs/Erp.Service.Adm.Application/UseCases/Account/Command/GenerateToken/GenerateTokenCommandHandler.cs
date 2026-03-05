@@ -68,7 +68,7 @@ public class GenerateTokenCommandHandler :
 
         result.UserInfo.UserAccess = new();
 
-        if (userInfo.Permissions.Contains(nameof(PermissionCode.OrganizationAllView)))
+        if (userInfo.Permissions.Contains(nameof(AdmPermissionCode.OrganizationAllView)))
             result.UserInfo.UserAccess.CanViewAllOrganizations = true;
         await _context.SaveChangesAsync(cancellationToken);
 

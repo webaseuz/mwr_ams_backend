@@ -13,6 +13,6 @@ public class MobileAppVersionBriefDtoProfile : CultureProfile
 
         CreateMap<MobileAppVersion, MobileAppVersionBriefDto>()
             .ForMember(src => src.StateName, conf => conf.MapFrom(ent => ent.State.Translates.AsQueryable().FirstOrDefault(StateTranslate.GetExpr(TranslateColumn.full_name,
-            lang)).TranslateText ?? ent.State.FullName));
+            cultureId)).TranslateText ?? ent.State.FullName));
     }
 }

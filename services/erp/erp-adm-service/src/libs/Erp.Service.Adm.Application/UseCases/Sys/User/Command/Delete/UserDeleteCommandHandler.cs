@@ -1,10 +1,9 @@
 using Erp.Core.Service.Application;
+using Erp.Core.Service.Application.Localization;
 using Erp.Service.Adm.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WEBASE;
-using WEBASE.AppError.Abstraction;
-using WEBASE.EntityFramework.Abstraction;
 
 namespace Erp.Service.Adm.Application.UseCases;
 

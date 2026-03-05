@@ -3,11 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>annotations</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="UseCases\Doc\**" />
     <Compile Remove="UseCases\GcpCitizen\**" />
+    <Compile Remove="UseCases\Account\**" />
     <EmbeddedResource Remove="UseCases\Doc\**" />
     <EmbeddedResource Remove="UseCases\GcpCitizen\**" />
     <None Remove="UseCases\Doc\**" />

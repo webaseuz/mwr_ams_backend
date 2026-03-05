@@ -33,7 +33,7 @@ internal sealed class GetRefuelByIdQueryHandler(
                     ErrorMessage = localizationBuilder.For("DOCUMENT_NOT_FOUND").WithData(new { Id = request.Id }).ToString()
                 });
 
-        dto.CanCreateForAllBranch = authService.HasPermission(nameof(PermissionCode.RefuelViewAll));
+        dto.CanCreateForAllBranch = authService.HasPermission(nameof(AdmPermissionCode.RefuelViewAll));
 
         return dto;
     }

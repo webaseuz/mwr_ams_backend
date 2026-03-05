@@ -3,6 +3,7 @@ using Erp.Core.Service.Application;
 using Erp.Service.Adm.Models;
 using MediatR;
 using System.Runtime.CompilerServices;
+using Microsoft.EntityFrameworkCore;
 using WEBASE.i18n;
 
 namespace Erp.Service.Adm.Application.UseCases;

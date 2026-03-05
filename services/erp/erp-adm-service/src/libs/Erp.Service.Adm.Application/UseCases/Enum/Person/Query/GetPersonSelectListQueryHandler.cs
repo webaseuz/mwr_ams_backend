@@ -14,7 +14,7 @@ internal sealed class GetPersonSelectListQueryHandler(IApplicationDbContext cont
     {
         var userInfo = authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(PermissionCode.ViewAllPerson)))
+        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.ViewAllPerson)))
             request.BranchId = userInfo.BranchId;
 
         var result = await context.People

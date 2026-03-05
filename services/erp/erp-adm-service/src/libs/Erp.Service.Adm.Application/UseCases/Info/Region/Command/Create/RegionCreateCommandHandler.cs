@@ -1,4 +1,5 @@
-﻿using Erp.Core.Service.Application;
+﻿using Erp.Core;
+using Erp.Core.Service.Application;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;
 using MediatR;
@@ -23,13 +24,7 @@ internal sealed class RegionCreateCommandHandler(
             StateId = WbStateIdConst.ACTIVE
         };
 
-        foreach (var t in request.Translates)
-            entity.Translates.Add(new RegionTranslate
-            {
-                LanguageId = t.LanguageId,
-                ColumnName = t.ColumnName.ToString(),
-                TranslateText = t.TranslateText
-            });
+        request.Translates.AddByUniqueFKTo(entity.Translates);
 
         await context.Regions.AddAsync(entity, cancellationToken);
         await context.SaveChangesAsync(cancellationToken);

@@ -15,7 +15,7 @@ internal sealed class GetNotificationTemplateSettingQueryHandler(
         var result = new NotificationTemplateSettingDto
         {
             DocDate = DateTime.Today,
-            CanCreateForAllBranch = authService.HasPermission(nameof(PermissionCode.AllNotificationTemplateSettingView)),
+            CanCreateForAllBranch = authService.HasPermission(nameof(AdmPermissionCode.AllNotificationTemplateSettingView)),
             BranchId = userInfo.BranchId
         };
 

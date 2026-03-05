@@ -229,8 +229,8 @@ public class ApplicationDbContext : WbDbContext, IApplicationDbContext
 
         Config.AutoSetProperties.DateOfCreated.PropertyName = nameof(Bank.CreatedAt);
         Config.AutoSetProperties.CreatedUserId.PropertyName = nameof(Bank.CreatedBy);
-        Config.AutoSetProperties.DateOfModified.PropertyName = nameof(Bank.ModifiedAt);
-        Config.AutoSetProperties.ModifiedUserId.PropertyName = nameof(Bank.ModifiedBy);
+        Config.AutoSetProperties.DateOfModified.PropertyName = nameof(Bank.LastModifiedAt);
+        Config.AutoSetProperties.ModifiedUserId.PropertyName = nameof(Bank.LastModifiedBy);
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -24,7 +24,7 @@ internal sealed class GetNotificationTemplateSettingBriefPageResultHandler(
 
         query = query.SortFilter(request, authService);
 
-        var result = await query.AsPagedResultAsync(request, cancellationToken);
+        var result = await query.AsPagedResultAsync(request);
 
         result.Rows = await result.Rows.SetActionControls(authService);
 
@@ -41,13 +41,13 @@ public static class NotificationTemplateSettingBriefDtoExtension
         foreach (var item in query)
         {
             item.CanAccept = StatusIdConst.CanNotificationTemplateSettingStatus(item.StatusId, StatusIdConst.ACCEPTED) &&
-                             authService.HasPermission(nameof(PermissionCode.NotificationTemplateSettingAccept));
+                             authService.HasPermission(nameof(AdmPermissionCode.NotificationTemplateSettingAccept));
             item.CanCancel = StatusIdConst.CanNotificationTemplateSettingStatus(item.StatusId, StatusIdConst.CANCELLED) &&
-                             authService.HasPermission(nameof(PermissionCode.NotificationTemplateSettingCancel));
+                             authService.HasPermission(nameof(AdmPermissionCode.NotificationTemplateSettingCancel));
             item.CanDelete = StatusIdConst.CanNotificationTemplateSettingStatus(item.StatusId, StatusIdConst.DELETED) &&
-                             authService.HasPermission(nameof(PermissionCode.NotificationTemplateSettingDelete));
+                             authService.HasPermission(nameof(AdmPermissionCode.NotificationTemplateSettingDelete));
             item.CanModify = StatusIdConst.CanNotificationTemplateSettingStatus(item.StatusId, StatusIdConst.MODIFIED) &&
-                             authService.HasPermission(nameof(PermissionCode.NotificationTemplateSettingEdit));
+                             authService.HasPermission(nameof(AdmPermissionCode.NotificationTemplateSettingEdit));
         }
         return Task.FromResult(query);
     }

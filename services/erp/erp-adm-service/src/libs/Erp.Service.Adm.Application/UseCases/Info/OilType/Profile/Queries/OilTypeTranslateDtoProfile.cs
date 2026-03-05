@@ -9,6 +9,6 @@ public class OilTypeTranslateDtoProfile : Profile
     public OilTypeTranslateDtoProfile()
     {
         CreateMap<OilTypeTranslate, OilTypeTranslateDto>()
-            .ForMember(src => src.LanguageName, conf => conf.MapFrom(ent => ent.Language.FullName));
+            .ForMember(src => src.Language, conf => conf.MapFrom(ent => ent.Language.FullName));
     }
 }

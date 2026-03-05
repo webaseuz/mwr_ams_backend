@@ -1,7 +1,7 @@
 ﻿using Erp.Core;
 using Erp.Service.Adm.Models;
 using MediatR;
-using WEBASE;
+using WEBASE.Storage;
 using WEBASE.Storage.Abstraction;
 
 namespace Erp.Service.Adm.Application.UseCases;

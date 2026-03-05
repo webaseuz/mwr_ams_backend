@@ -31,6 +31,22 @@ public class Bank :
     [StringLength(5)]
     public string BankCode { get; set; } = null!;
 
+    [Column("code")]
+    [StringLength(50)]
+    public string Code { get; set; }
+
+    [Column("inn")]
+    [StringLength(20)]
+    public string Inn { get; set; }
+
+    [Column("address")]
+    [StringLength(500)]
+    public string Address { get; set; }
+
+    [Column("website")]
+    [StringLength(250)]
+    public string Website { get; set; }
+
     [Column("is_deleted")]
     public bool IsDeleted { get; set; }
 

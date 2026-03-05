@@ -1,0 +1,5 @@
+﻿ALTER TABLE doc_transport_setting
+DROP COLUMN MED_CERT_NUMBER;
+
+ALTER TABLE doc_transport_setting
+DROP COLUMN MED_CERT_END_AT;

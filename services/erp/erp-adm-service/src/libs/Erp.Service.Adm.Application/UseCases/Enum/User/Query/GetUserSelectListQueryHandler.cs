@@ -14,7 +14,7 @@ internal sealed class GetUserSelectListQueryHandler(IApplicationDbContext contex
     {
         var userInfo = authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(PermissionCode.AllUserView)))
+        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllUserView)))
             request.BranchId = userInfo.BranchId;
 
         var query = context.Users.Where(x => x.StateId == WbStateIdConst.ACTIVE);

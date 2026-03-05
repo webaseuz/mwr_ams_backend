@@ -11,15 +11,6 @@ internal sealed class UploadDriverDocumentFileCommandHandler(
 {
     public async Task<IEnumerable<IWbStorageFileInfo>> Handle(DriverDocumentUploadCommand request, CancellationToken cancellationToken)
     {
-        List<IWbStorageFileInfo> allResults = new();
-        foreach (var file in request.Files)
-        {
-            var memoryStream = new MemoryStream();
-            await file.CopyToAsync(memoryStream, cancellationToken);
-            var result = await wbStorageService.SaveTempAsync(FileStorageConst.DRIVER_DOCUMENT_FILE,
-                new WbStorageFile(file.FileName, memoryStream));
-            allResults.AddRange(result);
-        }
-        return allResults;
+        return await wbStorageService.SaveTempAsync(FileStorageConst.DRIVER_DOCUMENT_FILE, request.Files);
     }
 }

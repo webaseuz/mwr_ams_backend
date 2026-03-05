@@ -3,7 +3,7 @@
 namespace Erp.Core;
 
 [WbPermissionEnum(AppIdConst.ADM)]
-public enum AdmPermissionCode
+/*public enum AdmPermissionCode
 {
     #region AppError
     [WbPermissionField(AdmPermissionSubGroupCode.AppError, "Кўриш")]
@@ -1302,744 +1302,744 @@ public enum AdmPermissionCode
     #endregion
 
 
-}
+}*/
 
 
-public enum PermissionCode
+public enum AdmPermissionCode
 {
     #region INFO
 
     #region Country
-    [WbPermissionField(PermissionSubGroupCode.Country, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Country, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     CountryView,
 
-    [WbPermissionField(PermissionSubGroupCode.Country, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Country, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     CountryCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Country, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Country, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     CountryEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Country, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Country, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     CountryDelete,
     #endregion
 
     #region Bank
-    [WbPermissionField(PermissionSubGroupCode.Bank, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Bank, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     BankView,
 
-    [WbPermissionField(PermissionSubGroupCode.Bank, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Bank, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     BankCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Bank, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Bank, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     BankEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Bank, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Bank, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     BankDelete,
     #endregion
 
     #region FuelType
-    [WbPermissionField(PermissionSubGroupCode.FuelType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     FuelTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     FuelTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     FuelTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     FuelTypeDelete,
     #endregion
 
     #region InsuranceType
-    [WbPermissionField(PermissionSubGroupCode.InsuranceType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.InsuranceType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     InsuranceTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.InsuranceType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.InsuranceType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     InsuranceTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.InsuranceType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.InsuranceType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     InsuranceTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.InsuranceType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.InsuranceType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     InsuranceTypeDelete,
     #endregion
 
     #region Currency
-    [WbPermissionField(PermissionSubGroupCode.Currency, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Currency, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     CurrencyView,
 
-    [WbPermissionField(PermissionSubGroupCode.Currency, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Currency, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     CurrencyCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Currency, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Currency, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     CurrencyEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Currency, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Currency, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     CurrencyDelete,
     #endregion
 
     #region Citizenship
-    [WbPermissionField(PermissionSubGroupCode.Citizenship, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Citizenship, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     CitizenshipView,
 
-    [WbPermissionField(PermissionSubGroupCode.Citizenship, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Citizenship, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     CitizenshipCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Citizenship, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Citizenship, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     CitizenshipEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Citizenship, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Citizenship, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     CitizenshipDelete,
     #endregion
 
     #region ServiceType
-    [WbPermissionField(PermissionSubGroupCode.ServiceType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.ServiceType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     ServiceTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.ServiceType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.ServiceType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     ServiceTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.ServiceType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.ServiceType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     ServiceTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.ServiceType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.ServiceType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     ServiceTypeDelete,
     #endregion
 
     #region Nationality
-    [WbPermissionField(PermissionSubGroupCode.Nationality, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Nationality, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     NationalityView,
 
-    [WbPermissionField(PermissionSubGroupCode.Nationality, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Nationality, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     NationalityCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Nationality, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Nationality, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     NationalityEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Nationality, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Nationality, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     NationalityDelete,
     #endregion
 
     #region District
-    [WbPermissionField(PermissionSubGroupCode.District, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.District, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     DistrictView,
 
-    [WbPermissionField(PermissionSubGroupCode.District, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.District, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     DistrictCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.District, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.District, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     DistrictEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.District, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.District, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     DistrictDelete,
     #endregion
 
     #region Organization
-    [WbPermissionField(PermissionSubGroupCode.Organization, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Organization, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     OrganizationAllView,
 
-    [WbPermissionField(PermissionSubGroupCode.Organization, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Organization, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     OrganizationView,
 
-    [WbPermissionField(PermissionSubGroupCode.Organization, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Organization, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     OrganizationCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Organization, "РЎРѕР·РґР°С‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Organization, "Создать все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     OrganizationUpsertForAll,
 
-    [WbPermissionField(PermissionSubGroupCode.Organization, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Organization, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     OrganizationEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Organization, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Organization, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     OrganizationDelete,
     #endregion
 
     #region Region
-    [WbPermissionField(PermissionSubGroupCode.Region, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Region, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     RegionView,
 
-    [WbPermissionField(PermissionSubGroupCode.Region, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Region, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     RegionCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Region, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Region, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     RegionEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Region, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Region, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     RegionDelete,
     #endregion
 
     #region BatteryType
-    [WbPermissionField(PermissionSubGroupCode.BatteryType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.BatteryType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     BatteryTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.BatteryType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.BatteryType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     BatteryTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.BatteryType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.BatteryType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     BatteryTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.BatteryType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.BatteryType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     BatteryTypeDelete,
 
     #endregion
 
     #region Contractor
-    [WbPermissionField(PermissionSubGroupCode.Contractor, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Contractor, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     ContractorView,
 
-    [WbPermissionField(PermissionSubGroupCode.Contractor, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Contractor, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     ContractorCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Contractor, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Contractor, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     ContractorEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Contractor, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Contractor, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     ContractorDelete,
     #endregion
 
     #region TransportBrand
-    [WbPermissionField(PermissionSubGroupCode.TransportBrand, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportBrand, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportBrandView,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportBrand, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportBrand, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportBrandCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportBrand, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportBrand, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportBrandEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportBrand, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportBrand, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportBrandDelete,
     #endregion
 
     #region TransportColor
-    [WbPermissionField(PermissionSubGroupCode.TransportColor, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportColor, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportColorView,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportColor, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportColor, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportColorCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportColor, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportColor, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportColorEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportColor, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportColor, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportColorDelete,
     #endregion
 
     #region TransportType
-    [WbPermissionField(PermissionSubGroupCode.TransportType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportTypeDelete,
     #endregion
 
     #region TransportUseType
-    [WbPermissionField(PermissionSubGroupCode.TransportUseType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportUseType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportUseTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportUseType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportUseType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportUseTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportUseType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportUseType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportUseTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportUseType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportUseType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportUseTypeDelete,
     #endregion
 
     #region TransportModel
-    [WbPermissionField(PermissionSubGroupCode.TransportModel, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportModel, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportModelView,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportModel, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportModel, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportModelCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportModel, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportModel, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportModelEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportModel, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportModel, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportModelDelete,
     #endregion
 
     #region OilType
-    [WbPermissionField(PermissionSubGroupCode.OilType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     OilTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.OilType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     OilTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.OilType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     OilTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.OilType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     OilTypeDelete,
     #endregion
 
     #region LiquidType
-    [WbPermissionField(PermissionSubGroupCode.LiquidType, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.LiquidType, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     LiquidTypeView,
 
-    [WbPermissionField(PermissionSubGroupCode.LiquidType, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.LiquidType, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     LiquidTypeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.LiquidType, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.LiquidType, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     LiquidTypeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.LiquidType, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.LiquidType, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     LiquidTypeDelete,
     #endregion
 
     #region OilModel
-    [WbPermissionField(PermissionSubGroupCode.OilModel, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilModel, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     OilModelView,
 
-    [WbPermissionField(PermissionSubGroupCode.OilModel, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilModel, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     OilModelCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.OilModel, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilModel, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     OilModelEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.OilModel, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OilModel, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     OilModelDelete,
     #endregion
 
     #region TireModel
-    [WbPermissionField(PermissionSubGroupCode.TireModel, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireModel, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TireModelView,
 
-    [WbPermissionField(PermissionSubGroupCode.TireModel, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireModel, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TireModelCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TireModel, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireModel, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TireModelEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TireModel, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireModel, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TireModelDelete,
     #endregion
 
     #region TireSize
-    [WbPermissionField(PermissionSubGroupCode.TireSize, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireSize, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TireSizeView,
 
-    [WbPermissionField(PermissionSubGroupCode.TireSize, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireSize, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TireSizeCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TireSize, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireSize, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TireSizeEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TireSize, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TireSize, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TireSizeDelete,
     #endregion
 
     #region MobileAppVersion
-    [WbPermissionField(PermissionSubGroupCode.MobileAppVersion, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.MobileAppVersion, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     MobileAppVersionView,
 
-    [WbPermissionField(PermissionSubGroupCode.MobileAppVersion, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.MobileAppVersion, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     MobileAppVersionCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.MobileAppVersion, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.MobileAppVersion, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     MobileAppVersionEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.MobileAppVersion, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.MobileAppVersion, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     MobileAppVersionDelete,
     #endregion
@@ -2049,312 +2049,312 @@ public enum PermissionCode
     #region HL
 
     #region Department
-    [WbPermissionField(PermissionSubGroupCode.Department, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Department, "Просмотреть все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     DepartmentAllView,
 
-    [WbPermissionField(PermissionSubGroupCode.Department, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Department, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     DepartmentView,
 
-    [WbPermissionField(PermissionSubGroupCode.Department, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Department, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     DepartmentCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Department, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Department, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     DepartmentEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Department, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Department, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     DepartmentDelete,
     #endregion
 
     #region Person
-    [WbPermissionField(PermissionSubGroupCode.Person, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Person, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     PersonView,
 
-    [WbPermissionField(PermissionSubGroupCode.Person, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Person, "Просмотреть все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     ViewAllPerson,
 
-    [WbPermissionField(PermissionSubGroupCode.Person, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Person, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     PersonCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Person, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Person, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     PersonEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Person, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Person, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     PersonDelete,
     #endregion
 
     #region Position
-    [WbPermissionField(PermissionSubGroupCode.Position, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Position, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     PositionView,
 
-    [WbPermissionField(PermissionSubGroupCode.Position, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Position, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     PositionCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Position, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Position, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     PositionEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Position, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Position, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     PositionDelete,
     #endregion
 
     #region Transport
-    [WbPermissionField(PermissionSubGroupCode.Transport, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportView,
 
-    [WbPermissionField(PermissionSubGroupCode.Transport, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РІ С„РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤РёР»РёР°Р»РґР°РіРё Р±Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Просмотреть все в филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Филиалдаги барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Filialdagi barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РІ С„РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все в филиал")]
     [WbTranslate(LanguageIdConst.EN, "View all in branch")]
     TransportBranchView,
 
-    [WbPermissionField(PermissionSubGroupCode.Transport, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Просмотреть все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     AllViewTransport,
 
-    [WbPermissionField(PermissionSubGroupCode.Transport, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Transport, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР° С„РёР»РёР°Р»Р»Р°СЂ СѓС‡СѓРЅ СЏСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Создать для всех Филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳамма филиаллар учун яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hamma filiallar uchun yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Создать для всех Филиал")]
     [WbTranslate(LanguageIdConst.EN, "Create for all branches")]
     TransportCreateForAllBranch,
 
-    [WbPermissionField(PermissionSubGroupCode.Transport, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Transport, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Transport, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportDelete,
     #endregion
 
     #region Driver
-    [WbPermissionField(PermissionSubGroupCode.Driver, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Driver, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     DriverView,
 
-    [WbPermissionField(PermissionSubGroupCode.Driver, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РІ С„РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤РёР»РёР°Р»РґР°РіРё Р±Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Driver, "Просмотреть все в филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Филиалдаги барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Filialdagi barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РІ С„РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все в филиал")]
     [WbTranslate(LanguageIdConst.EN, "View all in branch")]
     DriverBranchView,
 
-    [WbPermissionField(PermissionSubGroupCode.Driver, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Driver, "Просмотреть все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     AllViewDriver,
 
-    [WbPermissionField(PermissionSubGroupCode.Driver, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Driver, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     DriverCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Driver, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Driver, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     DriverEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Driver, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Driver, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     DriverDelete,
     #endregion
 
     #region FuelCard
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     FuelCardView,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµС…")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Просмотр всех")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasibni ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµС…")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр всех")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     FuelCardViewAll,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "РџСЂРѕСЃРјРѕС‚СЂ РІ РјР°СЃС€С‚Р°Р±Рµ С„РёР»РёР°Р»Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤РёР»РёР°Р» РјРёТ›С‘СЃРёРґР° РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Просмотр в масштабе филиала")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Филиал миқёсида кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Filial miqyosida ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІ РјР°СЃС€С‚Р°Р±Рµ С„РёР»РёР°Р»Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр в масштабе филиала")]
     [WbTranslate(LanguageIdConst.EN, "Branch View")]
     FuelCardViewBranch,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     FuelCardCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     FuelCardEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     FuelCardDelete,
 
-    [WbPermissionField(PermissionSubGroupCode.FuelCard, "РЎРѕР·РґР°С‚СЊ РІСЃРµ РІРµС‚РєРё")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р° Р±СЂР°РЅС‡Р»Р°СЂРЅРё СЏСЂР°С‚Р° РѕР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.FuelCard, "Создать все ветки")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барча бранчларни ярата олиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barcha branchlarni yarata olish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ РІСЃРµ РІРµС‚РєРё")]
+    [WbTranslate(LanguageIdConst.RU, "Создать все ветки")]
     [WbTranslate(LanguageIdConst.EN, "Create FuelCard For All Branch")]
     CreateFuelCardForAllBranch,
 
     #endregion
 
     #region PresentTrackingInfo
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     PresentTrackingInfoView,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     PresentTrackingInfoCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     PresentTrackingInfoEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     PresentTrackingInfoDelete,
     #endregion
 
     #region TrackingInfo
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TrackingInfoView,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TrackingInfoCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TrackingInfoEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentTrackingInfo, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentTrackingInfo, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TrackingInfoDelete,
     #endregion
@@ -2362,39 +2362,39 @@ public enum PermissionCode
     #region Branch
 
 
-    [WbPermissionField(PermissionSubGroupCode.Branch, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Branch, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     BranchAllView,
 
 
-    [WbPermissionField(PermissionSubGroupCode.Branch, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Branch, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     BranchView,
 
-    [WbPermissionField(PermissionSubGroupCode.Branch, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Branch, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     BranchCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Branch, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Branch, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     BranchEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Branch, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Branch, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     BranchDelete,
 
@@ -2403,38 +2403,38 @@ public enum PermissionCode
 
     #region Notification
 
-    [WbPermissionField(PermissionSubGroupCode.Notification, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Notification, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     AllNotificationView,
 
-    [WbPermissionField(PermissionSubGroupCode.Notification, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Notification, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     NotificationView,
 
-    [WbPermissionField(PermissionSubGroupCode.Notification, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Notification, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     NotificationCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Notification, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Notification, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     NotificationEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Notification, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Notification, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     NotificationDelete,
 
@@ -2442,39 +2442,39 @@ public enum PermissionCode
 
     #region PresentNotification
 
-    [WbPermissionField(PermissionSubGroupCode.PresentNotification, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentNotification, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     AllPresentNotificationView,
 
 
-    [WbPermissionField(PermissionSubGroupCode.PresentNotification, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentNotification, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     PresentNotificationView,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentNotification, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentNotification, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     PresentNotificationCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentNotification, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentNotification, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     PresentNotificationEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.PresentNotification, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.PresentNotification, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     PresentNotificationDelete,
 
@@ -2485,146 +2485,146 @@ public enum PermissionCode
     #region DOC
 
     #region TransportSetting
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     TransportSettingView,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     TransportSettingViewAll,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РџСЂРѕСЃРјРѕС‚СЂ С„РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р¤РёР»Р»СЏР» Р±СћР№РёС‡Р° РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Просмотр филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Филлял бўйича кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Fillyal bo'yicha ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ С„РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр филиал")]
     [WbTranslate(LanguageIdConst.EN, "View by branch")]
     TransportSettingViewByBranch,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РџСЂРѕСЃРјРѕС‚СЂ РїРѕ РІРѕРґРёС‚РµР»СЋ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РҐР°Р№РґРѕРІС‡Рё Р±СћР№РёС‡Р° РєСћСЂРёС€")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "Xaydovchi boвЂyicha koвЂrish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РїРѕ РІРѕРґРёС‚РµР»СЋ")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Просмотр по водителю")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Хайдовчи бўйича кўриш")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Xaydovchi bo‘yicha ko‘rish")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр по водителю")]
     [WbTranslate(LanguageIdConst.EN, "View by driver")]
     TransportSettingViewByDriver,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     TransportSettingCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     TransportSettingEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РџСЂРёРЅРёРјР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТљР°Р±СѓР» Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Принимать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Қабул қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Qabul qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРёРЅРёРјР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Принимать")]
     [WbTranslate(LanguageIdConst.EN, "Accept")]
     TransportSettingAccept,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РћС‚РјРµРЅР°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РµРєРѕСЂ Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Отмена")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бекор қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bekor qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РјРµРЅР°")]
+    [WbTranslate(LanguageIdConst.RU, "Отмена")]
     [WbTranslate(LanguageIdConst.EN, "Cancel")]
     TransportSettingCancel,
 
-    [WbPermissionField(PermissionSubGroupCode.TransportSetting, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.TransportSetting, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     TransportSettingDelete,
     #endregion
 
 
     #region Refuel
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РІ С„РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Просмотреть все в филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РІ С„РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотреть все в филиал")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     RefuelBranchView,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     RefuelViewAll,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     RefuelView,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     RefuelCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     RefuelEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     RefuelDelete,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РџСЂРёРЅСЏС‚РёРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "ТљР°Р±СѓР» Т›РёР»РёС€")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРёРЅСЏС‚РёРµ")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Принятие")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Қабул қилиш")]
+    [WbTranslate(LanguageIdConst.RU, "Принятие")]
     [WbTranslate(LanguageIdConst.EN, "Accept")]
     RefuelAccept,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РћС‚РјРµРЅРёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РµРєРѕСЂ Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Отменить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бекор қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bekor qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РјРµРЅРёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Отменить")]
     [WbTranslate(LanguageIdConst.EN, "Cancel")]
     RefuelCancel,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "OС‚РїСЂР°РІР»СЏС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р®Р±РѕСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Oтправлять")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Юбориш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yuborish")]
-    [WbTranslate(LanguageIdConst.RU, "OС‚РїСЂР°РІР»СЏС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Oтправлять")]
     [WbTranslate(LanguageIdConst.EN, "Send")]
     RefuelSend,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РћС‚РѕР·РІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РµРєРѕСЂ Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Отозвать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бекор қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bekor qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РѕР·РІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Отозвать")]
     [WbTranslate(LanguageIdConst.EN, "Revoke")]
     RefuelRevoke,
 
-    [WbPermissionField(PermissionSubGroupCode.Refuel, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР° С„РёР»РёР°Р»Р»Р°СЂ СѓС‡СѓРЅ СЏСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Refuel, "Создать для всех Филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳамма филиаллар учун яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hamma filiallar uchun yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Создать для всех Филиал")]
     [WbTranslate(LanguageIdConst.EN, "Create for all branches")]
     RefuelCreateForAllBranch,
 
@@ -2632,138 +2632,138 @@ public enum PermissionCode
     #endregion
 
     #region Expense
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     AllViewExpense,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     ExpenseView,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     ExpenseCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     ExpenseEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     ExpenseDelete,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РџСЂРёРЅСЏС‚РёРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "ТљР°Р±СѓР» Т›РёР»РёС€")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРёРЅСЏС‚РёРµ")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Принятие")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Қабул қилиш")]
+    [WbTranslate(LanguageIdConst.RU, "Принятие")]
     [WbTranslate(LanguageIdConst.EN, "Accept")]
     ExpenseAccept,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РћС‚РјРµРЅРёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РµРєРѕСЂ Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Отменить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бекор қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bekor qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РјРµРЅРёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Отменить")]
     [WbTranslate(LanguageIdConst.EN, "Cancel")]
     ExpenselCancel,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "OС‚РїСЂР°РІР»СЏС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р®Р±РѕСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Oтправлять")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Юбориш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yuborish")]
-    [WbTranslate(LanguageIdConst.RU, "OС‚РїСЂР°РІР»СЏС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Oтправлять")]
     [WbTranslate(LanguageIdConst.EN, "Send")]
     ExpenseSend,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РћС‚РјРµРЅРёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РµРєРѕСЂ Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Отменить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бекор қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bekor qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РјРµРЅРёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Отменить")]
     [WbTranslate(LanguageIdConst.EN, "Revoke")]
     ExpenseRevoke,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР° С„РёР»РёР°Р»Р»Р°СЂ СѓС‡СѓРЅ СЏСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Создать для всех Филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳамма филиаллар учун яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hamma filiallar uchun yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Создать для всех Филиал")]
     [WbTranslate(LanguageIdConst.EN, "Create for all branches")]
     ExpenseCreateForAllBranch,
 
-    [WbPermissionField(PermissionSubGroupCode.Expense, "РџСЂРёРєСЂРµРїРёС‚СЊ СЃС‡РµС‚-С„Р°РєС‚СѓСЂСѓ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІРёСЃРѕР±-С„Р°РєС‚СѓСЂР° Р±РёСЂРёРєС‚РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Expense, "Прикрепить счет-фактуру")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳисоб-фактура бириктириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hisob-faktura biriktirish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРёРєСЂРµРїРёС‚СЊ СЃС‡РµС‚-С„Р°РєС‚СѓСЂСѓ")]
+    [WbTranslate(LanguageIdConst.RU, "Прикрепить счет-фактуру")]
     [WbTranslate(LanguageIdConst.EN, "Invoice attach")]
     InvoiceAttach,
     #endregion
 
     #region NotificationTemplateSetting
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳаммасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hammasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     AllNotificationTemplateSettingView,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     NotificationTemplateSettingView,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     NotificationTemplateSettingCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     NotificationTemplateSettingEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     NotificationTemplateSettingDelete,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РџСЂРёРЅСЏС‚РёРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
-    [WbTranslate(LanguageIdConst.UZ_LATN, "ТљР°Р±СѓР» Т›РёР»РёС€")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРёРЅСЏС‚РёРµ")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Принятие")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
+    [WbTranslate(LanguageIdConst.UZ_LATN, "Қабул қилиш")]
+    [WbTranslate(LanguageIdConst.RU, "Принятие")]
     [WbTranslate(LanguageIdConst.EN, "Accept")]
     NotificationTemplateSettingAccept,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РћС‚РјРµРЅРёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘РµРєРѕСЂ Т›РёР»РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Отменить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Бекор қилиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Bekor qilish")]
-    [WbTranslate(LanguageIdConst.RU, "РћС‚РјРµРЅРёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Отменить")]
     [WbTranslate(LanguageIdConst.EN, "Cancel")]
     NotificationTemplateSettingCancel,
 
-    [WbPermissionField(PermissionSubGroupCode.NotificationTemplateSetting, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "ТІР°РјРјР° С„РёР»РёР°Р»Р»Р°СЂ СѓС‡СѓРЅ СЏСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.NotificationTemplateSetting, "Создать для всех Филиал")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ҳамма филиаллар учун яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Hamma filiallar uchun yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ РґР»СЏ РІСЃРµС… Р¤РёР»РёР°Р»")]
+    [WbTranslate(LanguageIdConst.RU, "Создать для всех Филиал")]
     [WbTranslate(LanguageIdConst.EN, "Create for all branches")]
     NotificationTemplateSettingCreateForAllBranch,
     #endregion
@@ -2773,89 +2773,89 @@ public enum PermissionCode
     #region SYS
 
     #region Role
-    [WbPermissionField(PermissionSubGroupCode.Role, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Role, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     RoleView,
 
-    [WbPermissionField(PermissionSubGroupCode.Role, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Role, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     RoleCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.Role, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Role, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     RoleEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.Role, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Role, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     RoleDelete,
     #endregion
 
     #region User
-    [WbPermissionField(PermissionSubGroupCode.User, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     UserView,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "РЎРѕР·РґР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЇСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Создать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать")]
     [WbTranslate(LanguageIdConst.EN, "Create")]
     UserCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     UserEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "РЈРґР°Р»РёС‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РЋС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Удалить")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "O'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить")]
     [WbTranslate(LanguageIdConst.EN, "Delete")]
     UserDelete,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё РєСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Просмотр все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр все")]
     [WbTranslate(LanguageIdConst.EN, "View all")]
     AllUserView,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "РЎРѕР·РґР°С‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё СЏСЂР°С‚РёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Создать все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини яратиш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini yaratish")]
-    [WbTranslate(LanguageIdConst.RU, "РЎРѕР·РґР°С‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Создать все")]
     [WbTranslate(LanguageIdConst.EN, "Create all")]
     AllUserCreate,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё С‚Р°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Редактировать все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать все")]
     [WbTranslate(LanguageIdConst.EN, "Edit all")]
     AllUserEdit,
 
-    [WbPermissionField(PermissionSubGroupCode.User, "РЈРґР°Р»РёС‚СЊ РІСЃРµ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р‘Р°СЂС‡Р°СЃРёРЅРё СћС‡РёСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.User, "Удалить все")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Барчасини ўчириш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Barchasini o'chirish")]
-    [WbTranslate(LanguageIdConst.RU, "РЈРґР°Р»РёС‚СЊ РІСЃРµ")]
+    [WbTranslate(LanguageIdConst.RU, "Удалить все")]
     [WbTranslate(LanguageIdConst.EN, "Delete all")]
     AllUserDelete,
     #endregion
@@ -2864,61 +2864,61 @@ public enum PermissionCode
     #region REPORT
 
     #region DriverPenalty
-    [WbPermissionField(PermissionSubGroupCode.DriverPenalty, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.DriverPenalty, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     DriverPenaltyView,
 
-    [WbPermissionField(PermissionSubGroupCode.DriverPenalty, "РџСЂРѕСЃРјРѕС‚СЂ (РўРѕР»СЊРєРѕ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ С„РёР»РёР°Р»)")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€ (Р¤Р°Т›Р°С‚ СћР· С„РёР»РёР°Р»Рё)")]
+    [WbPermissionField(AdmPermissionSubGroupCode.DriverPenalty, "Просмотр (Только собственный филиал)")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш (Фақат ўз филиали)")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish (Faqat o'z filiali)")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ (РўРѕР»СЊРєРѕ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ С„РёР»РёР°Р»)")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр (Только собственный филиал)")]
     [WbTranslate(LanguageIdConst.EN, "View branch")]
     DriverPenaltyBranchView,
 
-    [WbPermissionField(PermissionSubGroupCode.DriverPenalty, "РџСЂРѕСЃРјРѕС‚СЂ (Р’СЃРµ С„РёР»РёР°Р»С‹)")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€ (Р‘Р°СЂС‡Р° С„РёР»РёР°Р»Р»Р°СЂ)")]
+    [WbPermissionField(AdmPermissionSubGroupCode.DriverPenalty, "Просмотр (Все филиалы)")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш (Барча филиаллар)")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish (Barcha filiallar)")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ (Р’СЃРµ С„РёР»РёР°Р»С‹)")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр (Все филиалы)")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     DriverPenaltyAllView,
 
-    [WbPermissionField(PermissionSubGroupCode.DriverPenalty, "РћРїР»Р°С‚Р° С€С‚СЂР°С„Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р–Р°СЂРёРјР° СѓС‡СѓРЅ С‚СћР»РѕРІ")]
+    [WbPermissionField(AdmPermissionSubGroupCode.DriverPenalty, "Оплата штрафа")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Жарима учун тўлов")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Jarima uchun to'lov")]
-    [WbTranslate(LanguageIdConst.RU, "РћРїР»Р°С‚Р° С€С‚СЂР°С„Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Оплата штрафа")]
     [WbTranslate(LanguageIdConst.EN, "Driver penalty pay")]
     DriverPenaltyPay,
     #endregion
 
-    [WbPermissionField(PermissionSubGroupCode.OptimalRoute, "РћРїР»Р°С‚Р° С€С‚СЂР°С„Р°")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "Р–Р°СЂРёРјР° СѓС‡СѓРЅ С‚СћР»РѕРІ")]
+    [WbPermissionField(AdmPermissionSubGroupCode.OptimalRoute, "Оплата штрафа")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Жарима учун тўлов")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Jarima uchun to'lov")]
-    [WbTranslate(LanguageIdConst.RU, "РћРїР»Р°С‚Р° С€С‚СЂР°С„Р°")]
+    [WbTranslate(LanguageIdConst.RU, "Оплата штрафа")]
     [WbTranslate(LanguageIdConst.EN, "Driver penalty pay")]
     OptimalRoute,
 
     #region ExpenseReport
-    [WbPermissionField(PermissionSubGroupCode.ExpenseReport, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.ExpenseReport, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     ExpenseReportView,
 
-    [WbPermissionField(PermissionSubGroupCode.DriverPenalty, "РџСЂРѕСЃРјРѕС‚СЂ (РўРѕР»СЊРєРѕ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ С„РёР»РёР°Р»)")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€ (Р¤Р°Т›Р°С‚ СћР· С„РёР»РёР°Р»Рё)")]
+    [WbPermissionField(AdmPermissionSubGroupCode.DriverPenalty, "Просмотр (Только собственный филиал)")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш (Фақат ўз филиали)")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish (Faqat o'z filiali)")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ (РўРѕР»СЊРєРѕ СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ С„РёР»РёР°Р»)")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр (Только собственный филиал)")]
     [WbTranslate(LanguageIdConst.EN, "View branch")]
     ExpenseReportBranchView,
 
-    [WbPermissionField(PermissionSubGroupCode.DriverPenalty, "РџСЂРѕСЃРјРѕС‚СЂ (Р’СЃРµ С„РёР»РёР°Р»С‹)")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€ (Р‘Р°СЂС‡Р° С„РёР»РёР°Р»Р»Р°СЂ)")]
+    [WbPermissionField(AdmPermissionSubGroupCode.DriverPenalty, "Просмотр (Все филиалы)")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш (Барча филиаллар)")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish (Barcha filiallar)")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ (Р’СЃРµ С„РёР»РёР°Р»С‹)")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр (Все филиалы)")]
     [WbTranslate(LanguageIdConst.EN, "View All")]
     ExpenseReportAllView,
     #endregion
@@ -2927,16 +2927,16 @@ public enum PermissionCode
 
 
     #region For Developers
-    [WbPermissionField(PermissionSubGroupCode.Developer, "РџСЂРѕСЃРјРѕС‚СЂ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РљСћСЂРёС€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Developer, "Просмотр")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Кўриш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Ko'rish")]
-    [WbTranslate(LanguageIdConst.RU, "РџСЂРѕСЃРјРѕС‚СЂ")]
+    [WbTranslate(LanguageIdConst.RU, "Просмотр")]
     [WbTranslate(LanguageIdConst.EN, "View")]
     AppErrorView,
-    [WbPermissionField(PermissionSubGroupCode.Developer, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
-    [WbTranslate(LanguageIdConst.UZ_CYRL, "РўР°ТіСЂРёСЂР»Р°С€")]
+    [WbPermissionField(AdmPermissionSubGroupCode.Developer, "Редактировать")]
+    [WbTranslate(LanguageIdConst.UZ_CYRL, "Таҳрирлаш")]
     [WbTranslate(LanguageIdConst.UZ_LATN, "Tahrirlash")]
-    [WbTranslate(LanguageIdConst.RU, "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ")]
+    [WbTranslate(LanguageIdConst.RU, "Редактировать")]
     [WbTranslate(LanguageIdConst.EN, "Edit")]
     AppErrorEdit,
     #endregion

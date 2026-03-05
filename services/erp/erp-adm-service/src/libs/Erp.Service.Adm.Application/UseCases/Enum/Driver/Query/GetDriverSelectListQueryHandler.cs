@@ -1,4 +1,5 @@
 using Erp.Core;
+using Erp.Core.Constants;
 using Erp.Core.Service.Application;
 using Erp.Service.Adm.Models;
 using MediatR;
@@ -14,7 +15,7 @@ internal sealed class GetDriverSelectListQueryHandler(IApplicationDbContext cont
     {
         var userInfo = authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(PermissionCode.AllViewDriver)))
+        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllViewDriver)))
             request.BranchId = userInfo.BranchId;
 
         var query = context.Drivers.Where(x => x.StateId == WbStateIdConst.ACTIVE);
@@ -25,7 +26,7 @@ internal sealed class GetDriverSelectListQueryHandler(IApplicationDbContext cont
         if (request.TransportSettingId.HasValue)
             query = query.Where(q => q.Settings.Any(a => a.Id == request.TransportSettingId));
 
-        if (!userInfo.Permissions.Contains(nameof(PermissionCode.DriverBranchView)))
+        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.DriverBranchView)))
             query = query.Where(q => q.PersonId == userInfo.PersonId);
 
         if (request.TransportId.HasValue)

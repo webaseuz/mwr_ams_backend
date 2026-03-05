@@ -21,6 +21,7 @@
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
     <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="8.0.15" />
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.13" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.13" />
     <PackageVersion Include="Microsoft.Extensions.Options" Version="9.0.6" />
@@ -45,7 +46,7 @@
     <PackageVersion Include="WEBASE.i18n" Version="1.0.0" />
     <PackageVersion Include="WEBASE.OfficeTools" Version="2024.11.21.2051" />
     <PackageVersion Include="WEBASE.QRCode" Version="2024.5.7.1654" />
-    <PackageVersion Include="WEBASE.Standard.Storage.Abstraction" Version="1.0.0" />
+    <PackageVersion Include="WEBASE.Standard.Storage.Abstraction" Version="1.0.1" />
     <PackageVersion Include="WEBASE.Standard.Storage.MinIO" Version="1.0.0" />
     <PackageVersion Include="Yarp.ReverseProxy" Version="2.3.0" />
   </ItemGroup>

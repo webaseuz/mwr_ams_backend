@@ -49,16 +49,16 @@ public static class TransportSettingBriefDtoExtension
         foreach (var ent in query)
         {
             ent.CanAccept = StatusIdConst.CanTransportSettingStatus(ent.StatusId, StatusIdConst.ACCEPTED) &&
-                            authService.HasPermission(nameof(PermissionCode.TransportSettingAccept));
+                            authService.HasPermission(nameof(AdmPermissionCode.TransportSettingAccept));
 
             ent.CanDelete = StatusIdConst.CanTransportSettingStatus(ent.StatusId, StatusIdConst.DELETED) &&
-                            authService.HasPermission(nameof(PermissionCode.TransportSettingDelete));
+                            authService.HasPermission(nameof(AdmPermissionCode.TransportSettingDelete));
 
             ent.CanModify = StatusIdConst.CanTransportSettingStatus(ent.StatusId, StatusIdConst.MODIFIED) &&
-                            authService.HasPermission(nameof(PermissionCode.TransportSettingEdit));
+                            authService.HasPermission(nameof(AdmPermissionCode.TransportSettingEdit));
 
             ent.CanCancel = StatusIdConst.CanTransportSettingStatus(ent.StatusId, StatusIdConst.CANCELLED) &&
-                            authService.HasPermission(nameof(PermissionCode.TransportSettingCancel));
+                            authService.HasPermission(nameof(AdmPermissionCode.TransportSettingCancel));
 
             ent.FuelCardNumber = fuelCards.FirstOrDefault(x => x.TransportId == ent.TransportId)?.CardNumber ?? string.Empty;
         }

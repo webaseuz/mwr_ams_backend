@@ -39,16 +39,16 @@ public static class RefuelBriefDtoExtension
         foreach (var item in query)
         {
             item.CanAccept = StatusIdConst.CanRefuelStatus(item.StatusId, StatusIdConst.ACCEPTED) &&
-                             authService.HasPermission(nameof(PermissionCode.RefuelAccept));
+                             authService.HasPermission(nameof(AdmPermissionCode.RefuelAccept));
             item.CanCancel = false;
             item.CanSend = StatusIdConst.CanRefuelStatus(item.StatusId, StatusIdConst.SEND) &&
-                             authService.HasPermission(nameof(PermissionCode.RefuelSend));
+                             authService.HasPermission(nameof(AdmPermissionCode.RefuelSend));
             item.CanDelete = StatusIdConst.CanRefuelStatus(item.StatusId, StatusIdConst.DELETED) &&
-                             authService.HasPermission(nameof(PermissionCode.RefuelDelete));
+                             authService.HasPermission(nameof(AdmPermissionCode.RefuelDelete));
             item.CanRevoke = StatusIdConst.CanRefuelStatus(item.StatusId, StatusIdConst.REVOKED) &&
-                             authService.HasPermission(nameof(PermissionCode.RefuelRevoke));
+                             authService.HasPermission(nameof(AdmPermissionCode.RefuelRevoke));
             item.CanModify = StatusIdConst.CanRefuelStatus(item.StatusId, StatusIdConst.MODIFIED) &&
-                             authService.HasPermission(nameof(PermissionCode.RefuelEdit));
+                             authService.HasPermission(nameof(AdmPermissionCode.RefuelEdit));
         }
         return await Task.FromResult(query);
     }

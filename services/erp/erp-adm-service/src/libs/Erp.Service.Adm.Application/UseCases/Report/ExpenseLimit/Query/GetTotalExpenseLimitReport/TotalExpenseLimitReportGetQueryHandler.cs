@@ -1,6 +1,7 @@
 using Erp.Core.Service.Application;
 using Erp.Service.Adm.Models;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Dynamic.Core;
 using WEBASE;
 using WEBASE.EntityFramework.Abstraction;

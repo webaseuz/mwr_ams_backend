@@ -14,7 +14,6 @@ public class TireSizeDtoProfile : CultureProfile
         //TireSizeDto
         CreateMap<TireSize, TireSizeDto>()
              .ForMember(src => src.StateName, conf => conf.MapFrom(ent => ent.State.Translates.AsQueryable()
-             .FirstOrDefault(StateTranslate.GetExpr(TranslateColumn.full_name, cultureId)).TranslateText ?? ent.State.FullName))
-             .ForMember(src => src.Size, conf => conf.MapFrom(ent => $"{ent.Height}/{ent.Width} R{ent.Radius}".Replace(".00", "")));
+             .FirstOrDefault(StateTranslate.GetExpr(TranslateColumn.full_name, cultureId)).TranslateText ?? ent.State.FullName));
     }
 }

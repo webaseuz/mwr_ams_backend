@@ -29,7 +29,7 @@ internal sealed class CreateNotificationTemplateSettingCommandHandler(
             };
 
             var userInfo = authService.User;
-            if (!userInfo.Permissions.Contains(nameof(PermissionCode.NotificationTemplateSettingCreateForAllBranch)))
+            if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.NotificationTemplateSettingCreateForAllBranch)))
                 entity.BranchId = userInfo.BranchId;
 
             var haveSameIds = request.Users.Select(x => x.UserId).Intersect(request.RestrictedUsers.Select(x => x.UserId)).Any();

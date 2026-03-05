@@ -9,6 +9,6 @@ public class TransportUseTypeTranslateDtoProfile : Profile
     public TransportUseTypeTranslateDtoProfile()
     {
         CreateMap<TransportUseTypeTranslate, TransportUseTypeTranslateDto>()
-            .ForMember(src => src.LanguageName, conf => conf.MapFrom(ent => ent.Language.FullName));
+            .ForMember(src => src.Language, conf => conf.MapFrom(ent => ent.Language.FullName));
     }
 }

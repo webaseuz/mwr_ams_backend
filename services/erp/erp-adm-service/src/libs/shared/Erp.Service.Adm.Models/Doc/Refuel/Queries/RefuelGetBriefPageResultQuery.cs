@@ -1,6 +1,5 @@
 using MediatR;
 using WEBASE;
-using WEBASE.EntityFramework.Abstraction;
 
 namespace Erp.Service.Adm.Models;
 

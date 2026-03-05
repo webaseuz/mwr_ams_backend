@@ -41,7 +41,7 @@ public class GetUserInfoQueryHandler :
 
         userInfo.UserAccess = new();
 
-        if (userInfo.Permissions.Contains(nameof(PermissionCode.OrganizationAllView)))
+        if (userInfo.Permissions.Contains(nameof(AdmPermissionCode.OrganizationAllView)))
             userInfo.UserAccess.CanViewAllOrganizations = true;
 
         return userInfo;

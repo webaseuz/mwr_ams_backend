@@ -9,6 +9,6 @@ public class InsuranceTypeTranslateDtoProfile : Profile
     public InsuranceTypeTranslateDtoProfile()
     {
         CreateMap<InsuranceTypeTranslate, InsuranceTypeTranslateDto>()
-            .ForMember(src => src.LanguageName, conf => conf.MapFrom(ent => ent.Language.FullName));
+            .ForMember(src => src.Language, conf => conf.MapFrom(ent => ent.Language.FullName));
     }
 }

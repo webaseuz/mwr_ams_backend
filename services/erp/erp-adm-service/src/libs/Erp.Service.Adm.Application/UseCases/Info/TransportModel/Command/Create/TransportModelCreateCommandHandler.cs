@@ -31,13 +31,7 @@ internal sealed class TransportModelCreateCommandHandler(
             StateId = WbStateIdConst.ACTIVE
         };
 
-        foreach (var t in request.Translates)
-            entity.Translates.Add(new TransportModelTranslate
-            {
-                LanguageId = t.LanguageId,
-                ColumnName = t.ColumnName.ToString(),
-                TranslateText = t.TranslateText
-            });
+        request.Translates.AddByUniqueFKTo(entity.Translates);
 
         foreach (var f in request.Fuels)
             entity.Fuels.Add(new TransportModelFuel

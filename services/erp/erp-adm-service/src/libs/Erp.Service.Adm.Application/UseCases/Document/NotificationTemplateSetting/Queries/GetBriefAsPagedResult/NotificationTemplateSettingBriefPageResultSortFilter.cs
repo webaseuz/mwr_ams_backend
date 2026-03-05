@@ -16,7 +16,7 @@ public static class NotificationTemplateSettingBriefPageResultSortFilter
     {
         var userInfo = authService.User;
 
-        var hasViewAll = userInfo.Permissions.Contains(nameof(PermissionCode.AllNotificationTemplateSettingView));
+        var hasViewAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllNotificationTemplateSettingView));
         if (!hasViewAll)
         {
             query = query.Where(x => x.StatusId != StatusIdConst.DELETED);

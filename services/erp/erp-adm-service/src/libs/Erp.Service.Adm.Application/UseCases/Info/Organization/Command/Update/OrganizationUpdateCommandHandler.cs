@@ -1,4 +1,5 @@
-﻿using Erp.Core.Service.Application;
+﻿using Erp.Core;
+using Erp.Core.Service.Application;
 using Erp.Core.Service.Application.Localization;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;
@@ -44,16 +45,7 @@ internal sealed class OrganizationUpdateCommandHandler(
         entity.Latitude = request.Latitude;
         entity.Longitude = request.Longitude;
 
-        context.OrganizationTranslates.RemoveRange(entity.Translates);
-        entity.Translates.Clear();
-
-        foreach (var t in request.Translates)
-            entity.Translates.Add(new OrganizationTranslate
-            {
-                LanguageId = t.LanguageId,
-                ColumnName = t.ColumnName.ToString(),
-                TranslateText = t.TranslateText
-            });
+        request.Translates.ApplyChangesByUniqueFKTo(entity.Translates);
 
         await context.SaveChangesAsync(cancellationToken);
 

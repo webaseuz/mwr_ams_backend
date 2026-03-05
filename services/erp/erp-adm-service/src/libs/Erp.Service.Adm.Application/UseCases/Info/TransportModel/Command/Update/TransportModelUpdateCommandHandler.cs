@@ -47,16 +47,7 @@ internal sealed class TransportModelUpdateCommandHandler(
         entity.ConsumptionPer100Km = request.ConsumptionPer100Km;
         entity.ConsumptionPerHour = request.ConsumptionPerHour;
 
-        // Translates
-        context.TransportModelTranslates.RemoveRange(entity.Translates);
-        entity.Translates.Clear();
-        foreach (var t in request.Translates)
-            entity.Translates.Add(new TransportModelTranslate
-            {
-                LanguageId = t.LanguageId,
-                ColumnName = t.ColumnName.ToString(),
-                TranslateText = t.TranslateText
-            });
+        request.Translates.ApplyChangesByUniqueFKTo(entity.Translates);
 
         // Files
         {

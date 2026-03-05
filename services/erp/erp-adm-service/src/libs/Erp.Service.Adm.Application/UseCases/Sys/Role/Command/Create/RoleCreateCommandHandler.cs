@@ -5,6 +5,7 @@ using Erp.Service.Adm.Models;
 using MediatR;
 using WEBASE;
 using WEBASE.EntityFramework.Abstraction;
+using Erp.Core;
 
 namespace Erp.Service.Adm.Application.UseCases;
 
@@ -20,15 +21,10 @@ internal sealed class RoleCreateCommandHandler(
             FullName = request.FullName,
             IsAdmin = request.IsAdmin,
             StateId = WbStateIdConst.ACTIVE,
+            Translates = new List<RoleTranslate>()
         };
 
-        foreach (var t in request.Translates)
-            entity.Translates.Add(new RoleTranslate
-            {
-                LanguageId = t.LanguageId,
-                ColumnName = t.ColumnName,
-                TranslateText = t.TranslateText,
-            });
+        request.Translates.AddByUniqueFKTo(entity.Translates);
 
         foreach (var p in request.Permissions)
             entity.RolePermissions.Add(new RolePermission { PermissionId = p });

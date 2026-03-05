@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Dynamic.Core;
 using Erp.Core;
 using Erp.Core.Constants;
@@ -14,7 +15,7 @@ public static class TransportSettingBriefPageResultSortFilter
         IMainAuthService authService)
     {
         var userInfo = authService.User;
-        var hasViewAll = userInfo.Permissions.Contains(nameof(PermissionCode.TransportSettingViewAll));
+        var hasViewAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.TransportSettingViewAll));
 
         if (!hasViewAll)
             request.BranchId = userInfo.BranchId;

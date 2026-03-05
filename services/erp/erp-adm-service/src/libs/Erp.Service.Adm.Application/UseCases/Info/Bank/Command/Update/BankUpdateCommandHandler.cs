@@ -1,4 +1,5 @@
-﻿using Erp.Core.Service.Application;
+﻿using Erp.Core;
+using Erp.Core.Service.Application;
 using Erp.Core.Service.Application.Localization;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;
@@ -36,16 +37,7 @@ internal sealed class BankUpdateCommandHandler(
         entity.Address = request.Address;
         entity.Website = request.Website;
 
-        context.BankTranslates.RemoveRange(entity.Translates);
-        entity.Translates.Clear();
-
-        foreach (var t in request.Translates)
-            entity.Translates.Add(new BankTranslate
-            {
-                LanguageId = t.LanguageId,
-                ColumnName = t.ColumnName.ToString(),
-                TranslateText = t.TranslateText
-            });
+        request.Translates.ApplyChangesByUniqueFKTo(entity.Translates);
 
         await context.SaveChangesAsync(cancellationToken);
 

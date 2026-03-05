@@ -1,9 +1,10 @@
 using AutoMapper;
 using Erp.Core.Service.Application;
+using Erp.Core.Service.Application.Localization;
 using Erp.Service.Adm.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using WEBASE.AppError;
+using WEBASE;
 using WEBASE.i18n;
 
 namespace Erp.Service.Adm.Application.UseCases;

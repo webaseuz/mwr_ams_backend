@@ -41,7 +41,7 @@ internal sealed class UpdateExpenseCommandHandler(
 
         var userInfo = authService.User;
 
-        if (userInfo.Permissions.Contains(nameof(PermissionCode.InvoiceAttach)) && StatusIdConst.CanInvoice(entity.StatusId))
+        if (userInfo.Permissions.Contains(nameof(AdmPermissionCode.InvoiceAttach)) && StatusIdConst.CanInvoice(entity.StatusId))
         {
             request.Batteries?.ForEach(b =>
             {
@@ -94,7 +94,7 @@ internal sealed class UpdateExpenseCommandHandler(
             entity.BranchId = request.BranchId;
             entity.Message = request.Message;
 
-            if (!userInfo.Permissions.Contains(nameof(PermissionCode.ExpenseCreateForAllBranch)) || !request.BranchId.HasValue)
+            if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.ExpenseCreateForAllBranch)) || !request.BranchId.HasValue)
                 entity.BranchId = userInfo.BranchId;
 
             // === Main Files ===

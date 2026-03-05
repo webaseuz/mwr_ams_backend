@@ -14,8 +14,8 @@ public static class RefuelBriefPageResultSortFilter
         IMainAuthService authService)
     {
         var userInfo = authService.User;
-        var hasViewAll = userInfo.Permissions.Contains(nameof(PermissionCode.RefuelViewAll));
-        var hasBranchAll = userInfo.Permissions.Contains(nameof(PermissionCode.RefuelBranchView));
+        var hasViewAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.RefuelViewAll));
+        var hasBranchAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.RefuelBranchView));
 
         if (!hasViewAll && hasBranchAll)
         {

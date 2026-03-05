@@ -1,11 +1,11 @@
+using AutoMapper;
 using Erp.Core.Service.Application;
+using Erp.Core.Service.Application.Localization;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using WEBASE;
-using WEBASE.AppError.Abstraction;
-using WEBASE.EntityFramework.Abstraction;
 
 namespace Erp.Service.Adm.Application.UseCases;
 
@@ -40,7 +40,7 @@ internal sealed class UserCreateCommandHandler(
                 MiddleName = request.Person.MiddleName,
                 LastName = request.Person.LastName,
                 FullName = request.Person.FullName,
-                ShortName = request.Person.ShortName,
+                //ShortName = request.Person.ShortName,
                 Pinfl = request.Person.Pinfl,
                 DocumentSeria = request.Person.DocSeria ?? string.Empty,
                 DocumentNumber = request.Person.DocNumber ?? string.Empty,

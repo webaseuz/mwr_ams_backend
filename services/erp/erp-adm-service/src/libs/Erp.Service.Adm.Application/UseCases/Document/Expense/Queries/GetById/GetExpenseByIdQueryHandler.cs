@@ -53,9 +53,9 @@ public class GetExpenseByIdQueryHandler :
                    ErrorMessage = _localizationBuilder.For("DOCUMENT_NOT_FOUND").WithData(new { Id = request.Id }).ToString()
                });
 
-        dto.CanCreateForAllBranch = _authService.HasPermission(nameof(PermissionCode.AllViewExpense));
+        dto.CanCreateForAllBranch = _authService.HasPermission(nameof(AdmPermissionCode.AllViewExpense));
 
-        dto.CanInvoice = _authService.HasPermission(nameof(PermissionCode.InvoiceAttach)) && StatusIdConst.CanInvoice(dto.StatusId);
+        dto.CanInvoice = _authService.HasPermission(nameof(AdmPermissionCode.InvoiceAttach)) && StatusIdConst.CanInvoice(dto.StatusId);
 
         return dto;
     }
