@@ -1,7 +1,9 @@
-﻿namespace Erp.Core.Service.Domain.Entities;
-/*
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Erp.Core.Service.Domain.Entities;
+
 public class HistoryEntity<TId> :
-    BaseEntity<TId>
+    BaseEntity<TId> where TId : struct
 {
     [Column("is_deleted")]
     public bool IsDeleted { get; set; }
@@ -28,4 +30,4 @@ public class HistoryEntity<TId> :
 
     [Column("created_by")]
     public int? CreatedBy { get; set; }
-}*/
+}
