@@ -1,7 +1,7 @@
+using Erp.Core;
 using Erp.Core.Service.Application;
-using AutoMapper;
 using Erp.Core.Service.Domain;
-using Erp.Service.Adm.Models;
+using WEBASE;
 
 namespace Erp.Service.Adm.Application.UseCases;
 
@@ -15,7 +15,7 @@ public class TokenUserInfoDtoProfile : CultureProfile
             .ForMember(src => src.Pinfl, exp => exp.MapFrom(ent => ent.Person.Pinfl))
             .ForMember(src => src.Inn, exp => exp.MapFrom(ent => ent.Person.Inn))
             .ForMember(src => src.Permissions, exp => exp.MapFrom(ent => ent.UserRoles
-                .Where(ur => ur.StateId == StateIdConst.ACTIVE)
+                .Where(ur => ur.StateId == WbStateIdConst.ACTIVE)
                 .SelectMany(b => b.Role.RolePermissions.Select(rm => rm.Permission.Code))))
             .ForMember(src => src.LanguageCode, exp => exp.MapFrom(ent => ent.Language.ShortName))
             .ForMember(src => src.BranchName, exp => exp.MapFrom(ent => ent.Branch.FullName))

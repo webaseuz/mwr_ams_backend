@@ -1,17 +1,18 @@
-﻿using Bms.WEBASE.Helpers;
+﻿using Erp.Core.Extensions;
 using Newtonsoft.Json;
+using WEBASE;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
 public class TokenResultDto
 {
     public string AccessToken { get; set; }
 
-    [JsonConverter(typeof(WbDateTimeConverter))]
+    [JsonConverter(typeof(DateTimeConverter))]
     public DateTime AccessTokenExpireAt { get; set; }
 
     public string RefreshToken { get; set; }
 
-    [JsonConverter(typeof(WbDateTimeConverter))]
+    [JsonConverter(typeof(DateTimeConverter))]
     public DateTime RefreshTokenExpireAt { get; set; }
 }

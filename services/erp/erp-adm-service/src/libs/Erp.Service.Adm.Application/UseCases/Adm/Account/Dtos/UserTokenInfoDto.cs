@@ -1,4 +1,4 @@
-﻿namespace AutoPark.Application.UseCases.Accounts;
+﻿namespace Erp.Service.Adm.Application.UseCases;
 
 public class UserTokenInfoDto : TokenResultDto
 {

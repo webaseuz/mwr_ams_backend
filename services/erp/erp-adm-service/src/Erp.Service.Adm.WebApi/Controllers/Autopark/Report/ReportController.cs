@@ -1,12 +1,12 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.ExpenseReportAllView)]
+[Authorize(AutoparkPermissionCode.ExpenseReportAllView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class ReportController : BaseController
 {
-    [Authorize(AdmPermissionCode.ExpenseReportAllView)]
+    [Authorize(AutoparkPermissionCode.ExpenseReportAllView)]
     [HttpGet]
     public async Task<IActionResult> GetExpenseReportBriefListAsync(
         [FromQuery] TotalExpenseReportGetQuery query,
@@ -19,7 +19,7 @@ public class ReportController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseReportAllView)]
+    [Authorize(AutoparkPermissionCode.ExpenseReportAllView)]
     [HttpGet]
     public async Task<IActionResult> GetExpenseLimitReportBriefListAsync(
         [FromQuery] TotalExpenseLimitReportGetQuery query,

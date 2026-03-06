@@ -1,9 +1,8 @@
 ﻿using MediatR;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
-public class RefreshTokenCommand :
-    IRequest<TokenResultDto>
+public class RefreshTokenCommand : IRequest<TokenResultDto>
 {
     public string RefreshToken { get; set; }
 }

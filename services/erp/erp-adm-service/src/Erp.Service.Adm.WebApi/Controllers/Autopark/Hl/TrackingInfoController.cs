@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.PresentTrackingInfoView)]
+[Authorize(AutoparkPermissionCode.PresentTrackingInfoView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class TrackingInfoController : BaseController

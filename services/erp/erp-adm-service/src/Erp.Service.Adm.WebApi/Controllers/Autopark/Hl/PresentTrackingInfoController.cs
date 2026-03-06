@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.PresentTrackingInfoView)]
+[Authorize(AutoparkPermissionCode.PresentTrackingInfoView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class PresentTrackingInfoController : BaseController
@@ -30,7 +30,7 @@ public class PresentTrackingInfoController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.PresentTrackingInfoCreate)]
+    [Authorize(AutoparkPermissionCode.PresentTrackingInfoCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
     [FromBody] PresentTrackingInfoCreateCommand command,

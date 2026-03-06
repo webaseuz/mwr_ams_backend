@@ -1,14 +1,14 @@
-﻿namespace AutoPark.Application.UseCases.Accounts;
+﻿namespace Erp.Service.Adm.Application.UseCases;
 
-public class UserInfoDto :
-    UserAuthModel
+public class UserAccess
 {
-    public string PositionName { get; internal set; }
-    public string BranchName { get; internal set; }
-    public string DepartmentName { get; internal set; }
-
+    public bool CanViewAllOrganizations { get; set; }
 }
 
-
-
-
+public class UserInfoDto : UserAuthModel
+{
+    public string PositionName { get; set; }
+    public string BranchName { get; set; }
+    public string DepartmentName { get; set; }
+    public UserAccess UserAccess { get; set; }
+}

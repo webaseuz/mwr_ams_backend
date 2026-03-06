@@ -1,36 +1,22 @@
-﻿using Bms.WEBASE.Models;
-using Bms.WEBASE.Security;
+﻿using Erp.Core.Service.Application;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
-public class LogoutCommandHandler :
-    IRequestHandler<LogoutCommand, SuccessResult<bool>>
+internal sealed class LogoutCommandHandler(
+    IApplicationDbContext context,
+    ITokenProvider tokenProvider) : IRequestHandler<LogoutCommand, bool>
 {
-    private readonly IWriteEfCoreContext _context;
-    private readonly ITokenProvider _tokenProvider;
-
-    public LogoutCommandHandler(
-        IWriteEfCoreContext context,
-        ITokenProvider tokenProvider)
+    public async Task<bool> Handle(LogoutCommand request, CancellationToken cancellationToken)
     {
-        _context = context;
-        _tokenProvider = tokenProvider;
-    }
-
-    public async Task<SuccessResult<bool>> Handle(LogoutCommand request,
-                                                   CancellationToken cancellationToken)
-    {
-        //This approach do not load information into memory.It update database itself
-        await _context.UserTokens
-            .Where(ut => ut.TokenHash == _tokenProvider.TokenHash)
+        await context.UserTokens
+            .Where(ut => ut.TokenHash == tokenProvider.TokenHash)
             .ExecuteUpdateAsync(
-            a => a.SetProperty(a => a.IsDeleted, a => true), cancellationToken);
+                a => a.SetProperty(a => a.IsDeleted, a => true), cancellationToken);
 
+        await context.SaveChangesAsync(cancellationToken);
 
-        await _context.SaveChangesAsync(cancellationToken);
-
-        return SuccessResult.Create(true);
+        return true;
     }
 }

@@ -1,8 +1,7 @@
-﻿using Bms.WEBASE.Models;
-using MediatR;
+﻿using MediatR;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
-public class LogoutCommand :
-    IRequest<SuccessResult<bool>>
-{ }
+public class LogoutCommand : IRequest<bool>
+{
+}

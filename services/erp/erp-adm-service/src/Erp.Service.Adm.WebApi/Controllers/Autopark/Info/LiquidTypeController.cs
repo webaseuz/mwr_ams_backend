@@ -1,6 +1,6 @@
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.LiquidTypeView)]
+[Authorize(AutoparkPermissionCode.LiquidTypeView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class LiquidTypeController : BaseController
@@ -23,21 +23,21 @@ public class LiquidTypeController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.LiquidTypeCreate)]
+    [Authorize(AutoparkPermissionCode.LiquidTypeCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] LiquidTypeCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.LiquidTypeEdit)]
+    [Authorize(AutoparkPermissionCode.LiquidTypeEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] LiquidTypeUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.LiquidTypeDelete)]
+    [Authorize(AutoparkPermissionCode.LiquidTypeDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] LiquidTypeDeleteCommand command,

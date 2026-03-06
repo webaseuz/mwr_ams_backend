@@ -15,7 +15,7 @@ internal sealed class GetTransportSelectListQueryHandler(IApplicationDbContext c
     {
         var userInfo = authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllViewTransport)))
+        if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.AllViewTransport)))
             request.BranchId = userInfo.BranchId;
 
         var query = context.Transports.Where(x => x.StateId == WbStateIdConst.ACTIVE);
@@ -23,7 +23,7 @@ internal sealed class GetTransportSelectListQueryHandler(IApplicationDbContext c
         if (request.BranchId.HasValue)
             query = query.Where(q => q.BranchId == request.BranchId);
 
-        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.TransportBranchView)))
+        if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.TransportBranchView)))
         {
             request.DriverId = null;
             query = query.Where(q => q.Settings.Any(s => s.StatusId == StatusIdConst.ACCEPTED) &&

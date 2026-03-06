@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.OilModelView)]
+[Authorize(AutoparkPermissionCode.OilModelView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class OilModelController : BaseController
@@ -24,21 +24,21 @@ public class OilModelController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.OilModelCreate)]
+    [Authorize(AutoparkPermissionCode.OilModelCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] OilModelCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.OilModelEdit)]
+    [Authorize(AutoparkPermissionCode.OilModelEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] OilModelUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.OilModelDelete)]
+    [Authorize(AutoparkPermissionCode.OilModelDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] OilModelDeleteCommand command,

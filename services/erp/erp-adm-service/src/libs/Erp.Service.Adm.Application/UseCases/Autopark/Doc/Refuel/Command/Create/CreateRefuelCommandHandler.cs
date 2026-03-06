@@ -55,7 +55,7 @@ internal sealed class CreateRefuelCommandHandler(
             };
 
             var userInfo = authService.User;
-            if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.RefuelCreateForAllBranch)) || !request.BranchId.HasValue)
+            if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.RefuelCreateForAllBranch)) || !request.BranchId.HasValue)
                 entity.BranchId = userInfo.BranchId;
 
             if (!request.Latitude.HasValue || !request.Longitude.HasValue)

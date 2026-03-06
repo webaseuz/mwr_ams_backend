@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.TransportBrandView)]
+[Authorize(AutoparkPermissionCode.TransportBrandView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class TransportBrandController : BaseController
@@ -25,7 +25,7 @@ public class TransportBrandController : BaseController
         => Ok(await Mediator.Send(query, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.TransportBrandCreate)]
+    [Authorize(AutoparkPermissionCode.TransportBrandCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] TransportBrandCreateCommand command,
@@ -33,14 +33,14 @@ public class TransportBrandController : BaseController
         => Ok(await Mediator.Send(command, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.TransportBrandEdit)]
+    [Authorize(AutoparkPermissionCode.TransportBrandEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] TransportBrandUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TransportBrandDelete)]
+    [Authorize(AutoparkPermissionCode.TransportBrandDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] TransportBrandDeleteCommand command,

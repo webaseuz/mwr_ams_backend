@@ -15,7 +15,7 @@ public static class TransportSettingBriefPageResultSortFilter
         IMainAuthService authService)
     {
         var userInfo = authService.User;
-        var hasViewAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.TransportSettingViewAll));
+        var hasViewAll = userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.TransportSettingViewAll));
 
         if (!hasViewAll)
             request.BranchId = userInfo.BranchId;

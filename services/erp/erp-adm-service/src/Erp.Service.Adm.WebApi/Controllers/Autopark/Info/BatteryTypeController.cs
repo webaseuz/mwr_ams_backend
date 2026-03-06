@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.BatteryTypeView)]
+[Authorize(AutoparkPermissionCode.BatteryTypeView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class BatteryTypeController : BaseController
@@ -25,7 +25,7 @@ public class BatteryTypeController : BaseController
         => Ok(await Mediator.Send(query, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.BatteryTypeCreate)]
+    [Authorize(AutoparkPermissionCode.BatteryTypeCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] BatteryTypeCreateCommand command,
@@ -33,14 +33,14 @@ public class BatteryTypeController : BaseController
         => Ok(await Mediator.Send(command, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.BatteryTypeEdit)]
+    [Authorize(AutoparkPermissionCode.BatteryTypeEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] BatteryTypeUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.BatteryTypeDelete)]
+    [Authorize(AutoparkPermissionCode.BatteryTypeDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] BatteryTypeDeleteCommand command,

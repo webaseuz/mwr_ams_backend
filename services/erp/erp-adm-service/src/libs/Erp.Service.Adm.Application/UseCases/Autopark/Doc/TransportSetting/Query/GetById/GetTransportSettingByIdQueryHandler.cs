@@ -37,7 +37,7 @@ internal sealed class GetTransportSettingByIdQueryHandler(
             .FirstOrDefaultAsync(x => x.TransportId == dto.TransportId, cancellationToken);
 
         dto.FuelCardNumber = fuelCard?.CardNumber ?? string.Empty;
-        dto.CanCreateForAllBranch = authService.HasPermission(nameof(AdmPermissionCode.TransportSettingViewAll));
+        dto.CanCreateForAllBranch = authService.HasPermission(nameof(AutoparkPermissionCode.TransportSettingViewAll));
 
         return dto;
     }

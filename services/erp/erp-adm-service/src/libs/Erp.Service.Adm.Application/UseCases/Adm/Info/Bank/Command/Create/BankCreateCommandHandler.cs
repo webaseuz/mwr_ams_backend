@@ -21,7 +21,6 @@ internal sealed class BankCreateCommandHandler(
             ShortName = request.ShortName,
             Inn = request.Inn,
             Address = request.Address,
-            Website = request.Website,
             StateId = WbStateIdConst.ACTIVE
         };
 

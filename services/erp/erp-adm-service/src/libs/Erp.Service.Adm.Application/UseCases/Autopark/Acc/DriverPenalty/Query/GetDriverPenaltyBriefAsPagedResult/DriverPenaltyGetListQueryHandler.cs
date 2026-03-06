@@ -40,11 +40,11 @@ internal sealed class DriverPenaltyGetListQueryHandler(
 
         domainQuery = domainQuery.Where(dp => dp.CreatedAt >= fromDate && dp.CreatedAt <= toDate);
 
-        if (!authService.HasPermission(AdmPermissionCode.DriverPenaltyAllView))
+        if (!authService.HasPermission(AutoparkPermissionCode.DriverPenaltyAllView))
         {
-            if (authService.HasPermission(AdmPermissionCode.DriverPenaltyBranchView))
+            if (authService.HasPermission(AutoparkPermissionCode.DriverPenaltyBranchView))
                 domainQuery = domainQuery.Where(dp => dp.BranchId == authService.User.BranchId);
-            else if (authService.HasPermission(AdmPermissionCode.DriverPenaltyView))
+            else if (authService.HasPermission(AutoparkPermissionCode.DriverPenaltyView))
                 domainQuery = domainQuery.Where(dp => dp.PersonId == authService.User.PersonId);
         }
 
@@ -61,7 +61,7 @@ internal sealed class DriverPenaltyGetListQueryHandler(
 
         var result = await query.AsPagedResultAsync(request);
 
-        var canPay = authService.HasPermission(AdmPermissionCode.DriverPenaltyPay);
+        var canPay = authService.HasPermission(AutoparkPermissionCode.DriverPenaltyPay);
         foreach (var dto in result.Rows)
             dto.CanPay = canPay;
 

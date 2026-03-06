@@ -1,3 +1,4 @@
+using Erp.Core;
 using Erp.Core.Service.Application;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;

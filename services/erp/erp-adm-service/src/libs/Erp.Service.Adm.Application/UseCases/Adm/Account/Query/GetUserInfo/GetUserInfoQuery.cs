@@ -1,8 +1,7 @@
 ﻿using MediatR;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
-public class GetUserInfoQuery :
-    IRequest<UserInfoDto>
+public class GetUserInfoQuery : IRequest<UserInfoDto>
 {
 }

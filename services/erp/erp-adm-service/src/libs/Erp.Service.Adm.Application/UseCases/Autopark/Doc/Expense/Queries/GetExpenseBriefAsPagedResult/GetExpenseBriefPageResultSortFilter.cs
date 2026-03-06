@@ -18,14 +18,14 @@ public static class GetExpenseBriefPageResultSortFilter
         IApplicationDbContext context)
     {
         var userInfo = authService.User;
-        var hasViewAll = userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllViewExpense));
+        var hasViewAll = userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.AllViewExpense));
         if (!hasViewAll)
         {
             var driver = await context.Drivers.FirstOrDefaultAsync(x => x.PersonId == userInfo.PersonId);
             query = query.Where(x => x.StatusId != StatusIdConst.DELETED && x.DriverId == driver.Id);
 
         }
-        if (!authService.HasPermission(nameof(AdmPermissionCode.AllViewExpense)))
+        if (!authService.HasPermission(nameof(AutoparkPermissionCode.AllViewExpense)))
             request.BranchId = userInfo?.BranchId;
 
         if (request.HasSearch())

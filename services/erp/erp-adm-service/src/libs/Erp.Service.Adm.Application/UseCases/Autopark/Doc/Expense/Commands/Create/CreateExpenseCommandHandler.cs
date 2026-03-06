@@ -31,7 +31,7 @@ internal sealed class CreateExpenseCommandHandler(
             };
 
             var userInfo = authService.User;
-            if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.ExpenseCreateForAllBranch)) || !request.BranchId.HasValue)
+            if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.ExpenseCreateForAllBranch)) || !request.BranchId.HasValue)
                 entity.BranchId = userInfo.BranchId;
 
             foreach (var b in request.Batteries)

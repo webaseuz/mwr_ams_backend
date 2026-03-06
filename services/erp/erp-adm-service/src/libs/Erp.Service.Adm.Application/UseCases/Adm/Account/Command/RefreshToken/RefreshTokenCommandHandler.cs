@@ -1,60 +1,55 @@
-﻿using AutoPark.Application.Security;
-using Bms.WEBASE.Extensions;
-using Bms.WEBASE.Helpers;
+﻿using Erp.Core.Service.Application;
+using Erp.Core.Service.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
-public class RefreshTokenCommandHandler :
-    IRequestHandler<RefreshTokenCommand, TokenResultDto>
+internal sealed class RefreshTokenCommandHandler(
+    IApplicationDbContext context,
+    ITokenService tokenService,
+    IPasswordHasher passwordHasher) : IRequestHandler<RefreshTokenCommand, TokenResultDto>
 {
-    private readonly IAsyncAppTokenService _tokenService;
-    private readonly IWriteEfCoreContext _context;
-
-    public RefreshTokenCommandHandler(
-        IAsyncAppTokenService tokenService,
-        IWriteEfCoreContext context)
-    {
-        _tokenService = tokenService;
-        _context = context;
-    }
-
-    public async Task<TokenResultDto> Handle(RefreshTokenCommand request,
-                                       CancellationToken cancellationToken)
+    public async Task<TokenResultDto> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
     {
         var result = new TokenResultDto();
-        var hashOfToken = HashHelper.ComputeSimpleHash(request.RefreshToken);
+        var hashOfToken = passwordHasher.Compute(request.RefreshToken);
 
-        var user = await _context.Users
-            .FirstOrDefaultAsync(u => u.RefreshTokens.Any(rt => rt.TokenHash == hashOfToken));
+        var user = await context.Users
+            .FirstOrDefaultAsync(u => u.RefreshTokens.Any(rt => rt.TokenHash == hashOfToken), cancellationToken);
 
         if (user == null)
             return result;
 
-        var accessTokenResult = await _tokenService.GenerateTokenAsync(user.UserName);
-
-        if (accessTokenResult.IsNullOrEmptyObject())
+        var accessTokenResult = await tokenService.GenerateTokenAsync(user.UserName);
+        if (accessTokenResult == null)
             return result;
 
-        var refreshToken = await _tokenService.GenerateRefreshTokenAsync();
-
-        if (refreshToken.IsNullOrEmptyObject())
+        var refreshToken = await tokenService.GenerateRefreshTokenAsync();
+        if (refreshToken == null)
             return result;
 
-        user.AddToken(user.UserName,
-                      HashHelper.ComputeSimpleHash(accessTokenResult.Token),
-                      accessTokenResult.ExpireAt);
+        await context.UserTokens.AddAsync(new UserToken
+        {
+            UserId = user.Id,
+            UserIdentity = user.UserName,
+            TokenHash = passwordHasher.Compute(accessTokenResult.Token),
+            ExpireAt = accessTokenResult.ExpireAt
+        }, cancellationToken);
 
-        user.AddRefreshToken(HashHelper.ComputeSimpleHash(refreshToken.Token),
-                             refreshToken.ExpireAt);
+        await context.UserRefreshTokens.AddAsync(new UserRefreshToken
+        {
+            UserId = user.Id,
+            TokenHash = passwordHasher.Compute(refreshToken.Token),
+            ExpireAt = refreshToken.ExpireAt
+        }, cancellationToken);
 
-        await _context.UserRefreshTokens
-                .Where(ur => ur.TokenHash == hashOfToken)
-                .ExecuteUpdateAsync(ur =>
-                    ur.SetProperty(u => u.IsDeleted, u => true));
+        await context.UserRefreshTokens
+            .Where(ur => ur.TokenHash == hashOfToken)
+            .ExecuteUpdateAsync(ur =>
+                ur.SetProperty(u => u.IsDeleted, u => true), cancellationToken);
 
-        await _context.SaveChangesAsync(cancellationToken);
+        await context.SaveChangesAsync(cancellationToken);
 
         result.AccessToken = accessTokenResult.Token;
         result.AccessTokenExpireAt = accessTokenResult.ExpireAt;

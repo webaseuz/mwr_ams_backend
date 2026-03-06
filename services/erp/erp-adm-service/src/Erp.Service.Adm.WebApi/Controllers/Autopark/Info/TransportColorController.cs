@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.TransportColorView)]
+[Authorize(AutoparkPermissionCode.TransportColorView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class TransportColorController : BaseController
@@ -25,7 +25,7 @@ public class TransportColorController : BaseController
         => Ok(await Mediator.Send(query, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.TransportColorCreate)]
+    [Authorize(AutoparkPermissionCode.TransportColorCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] TransportColorCreateCommand command,
@@ -33,14 +33,14 @@ public class TransportColorController : BaseController
         => Ok(await Mediator.Send(command, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.TransportColorEdit)]
+    [Authorize(AutoparkPermissionCode.TransportColorEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] TransportColorUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TransportColorDelete)]
+    [Authorize(AutoparkPermissionCode.TransportColorDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] TransportColorDeleteCommand command,

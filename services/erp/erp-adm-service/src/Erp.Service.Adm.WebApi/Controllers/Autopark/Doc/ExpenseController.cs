@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.ExpenseView)]
+[Authorize(AutoparkPermissionCode.ExpenseView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class ExpenseController : BaseController
@@ -24,49 +24,49 @@ public class ExpenseController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseCreate)]
+    [Authorize(AutoparkPermissionCode.ExpenseCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] ExpenseCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseEdit)]
+    [Authorize(AutoparkPermissionCode.ExpenseEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] ExpenseUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseAccept)]
+    [Authorize(AutoparkPermissionCode.ExpenseAccept)]
     [HttpPost]
     public async Task<IActionResult> AcceptAsync(
         [FromBody] ExpenseAcceptCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenselCancel)]
+    [Authorize(AutoparkPermissionCode.ExpenselCancel)]
     [HttpPost]
     public async Task<IActionResult> CancelAsync(
         [FromBody] ExpenseCancelCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseSend)]
+    [Authorize(AutoparkPermissionCode.ExpenseSend)]
     [HttpPost]
     public async Task<IActionResult> SendAsync(
         [FromBody] ExpenseSendCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseRevoke)]
+    [Authorize(AutoparkPermissionCode.ExpenseRevoke)]
     [HttpPost]
     public async Task<IActionResult> RevokeAsync(
         [FromBody] ExpenseRevokeCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.ExpenseDelete)]
+    [Authorize(AutoparkPermissionCode.ExpenseDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] ExpenseDeleteCommand command,

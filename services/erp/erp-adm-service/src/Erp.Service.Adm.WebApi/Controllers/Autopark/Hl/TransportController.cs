@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.TransportView)]
+[Authorize(AutoparkPermissionCode.TransportView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class TransportController : BaseController
@@ -24,21 +24,21 @@ public class TransportController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TransportCreate)]
+    [Authorize(AutoparkPermissionCode.TransportCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] TransportCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TransportEdit)]
+    [Authorize(AutoparkPermissionCode.TransportEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] TransportUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TransportDelete)]
+    [Authorize(AutoparkPermissionCode.TransportDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] TransportDeleteCommand command,

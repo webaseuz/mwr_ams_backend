@@ -1,43 +1,40 @@
-﻿using AutoPark.Application.Security;
-using AutoPark.Domain;
-using Bms.Core.Application;
-using Bms.Core.Application.Mapping;
-using Bms.Core.Domain;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Erp.Core;
+using Erp.Core.Service.Application;
+using Erp.Core.Service.Application.Localization;
+using Erp.Core.Service.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using WEBASE;
 
-namespace AutoPark.Application.UseCases.Accounts;
+namespace Erp.Service.Adm.Application.UseCases;
 
-public class GetUserInfoQueryHandler :
-    IRequestHandler<GetUserInfoQuery, UserInfoDto>
+internal sealed class GetUserInfoQueryHandler(
+    IApplicationDbContext context,
+    IMapper mapper,
+    IMainAuthService authService,
+    ILocalizationBuilder localizationBuilder) : IRequestHandler<GetUserInfoQuery, UserInfoDto>
 {
-    private readonly IReadEfCoreContext _context;
-    private readonly IMapProvider _mapper;
-    private readonly IAsyncAppAuthService _authService;
-
-    public GetUserInfoQueryHandler(
-        IReadEfCoreContext context,
-        IMapProvider mapper,
-        IAsyncAppAuthService authService)
+    public async Task<UserInfoDto> Handle(GetUserInfoQuery request, CancellationToken cancellationToken)
     {
-        _mapper = mapper;
-        _authService = authService;
-        _context = context;
-    }
+        var userName = authService.UserName;
 
-    public async Task<UserInfoDto> Handle(GetUserInfoQuery request,
-                                               CancellationToken cancellationToken)
-    {
-        var userIdentity = await _authService.GetUserIdentityAsync();
-
-        var userInfo = await _mapper.MapCollection<User, UserInfoDto>(_context.Users.IsSoftActive())
-            .FirstOrDefaultAsync(u => u.UserName == userIdentity, cancellationToken);
-
+        var userInfo = await context.Users
+            .Where(u => u.UserName == userName && !u.IsDeleted && u.StateId == WbStateIdConst.ACTIVE)
+            .ProjectTo<UserInfoDto>(mapper.ConfigurationProvider)
+            .FirstOrDefaultAsync(cancellationToken);
 
         if (userInfo == null)
-            throw ClientLogicalExceptionHelper.UserNotFound();
+            throw new WbClientException()
+                .WithVisibility(WbExceptionVisibility.CLIENT_VISIBLE)
+                .WithErrors(new WbFailure
+                {
+                    Key = "USER_NOT_FOUND",
+                    ErrorMessage = localizationBuilder.For("USER_NOT_FOUND").ToString()
+                });
 
-        userInfo.ResolvePermissions();
+        userInfo.ResolveModules();
 
         userInfo.UserAccess = new();
 

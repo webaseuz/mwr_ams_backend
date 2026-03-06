@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.TireModelView)]
+[Authorize(AutoparkPermissionCode.TireModelView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class TireModelController : BaseController
@@ -24,21 +24,21 @@ public class TireModelController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TireModelCreate)]
+    [Authorize(AutoparkPermissionCode.TireModelCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] TireModelCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TireModelEdit)]
+    [Authorize(AutoparkPermissionCode.TireModelEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] TireModelUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TireModelDelete)]
+    [Authorize(AutoparkPermissionCode.TireModelDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] TireModelDeleteCommand command,

@@ -21,7 +21,7 @@ public class GetExpenseQueryHandler :
         newDto.BranchId = userInfo.BranchId;
         newDto.DocDate = DateTime.Now;
 
-        newDto.CanCreateForAllBranch = _authService.HasPermission(nameof(AdmPermissionCode.AllViewExpense));
+        newDto.CanCreateForAllBranch = _authService.HasPermission(nameof(AutoparkPermissionCode.AllViewExpense));
 
         return await Task.FromResult(newDto);
     }

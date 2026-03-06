@@ -3,7 +3,7 @@ using WEBASE.Storage;
 
 namespace Erp.Service.Adm.WebApi;
 
-//[Authorize(AdmPermissionCode.DriverView)]
+//[Authorize(AutoparkPermissionCode.DriverView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class DriverController : BaseController
@@ -32,28 +32,28 @@ public class DriverController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.DriverCreate)]
+    [Authorize(AutoparkPermissionCode.DriverCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] DriverCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.DriverEdit)]
+    [Authorize(AutoparkPermissionCode.DriverEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] DriverUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.DriverDelete)]
+    [Authorize(AutoparkPermissionCode.DriverDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] DriverDeleteCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.DriverView)]
+    [Authorize(AutoparkPermissionCode.DriverView)]
     [HttpPost]
     [ProducesResponseType(typeof(IEnumerable<StorageFileInfoDto>), 200)]
     public async Task<IActionResult> UploadFileAsync(
@@ -65,14 +65,14 @@ public class DriverController : BaseController
         return Ok(await Mediator.Send(new DriverDocumentUploadCommand { Files = wbStorageFile }, cancellationToken));
     }
 
-    [Authorize(AdmPermissionCode.DriverView)]
+    [Authorize(AutoparkPermissionCode.DriverView)]
     [HttpPost]
     public async Task<IActionResult> DownloadFileAsync(
         [FromBody] DriverDocumentDownloadCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.DriverView)]
+    [Authorize(AutoparkPermissionCode.DriverView)]
     [HttpGet]
     public async Task<IActionResult> DownloadExcelForInsertAsync(
     [FromQuery] DriverGetExcelTemplateQuery command,
@@ -87,7 +87,7 @@ public class DriverController : BaseController
         );
     }
 
-    ////[Authorize(AdmPermissionCode.DriverView)]
+    ////[Authorize(AutoparkPermissionCode.DriverView)]
     //[HttpPost]
     //[Consumes("multipart/form-data")]
     //public async Task<IActionResult> InsertFromExcelAsync(

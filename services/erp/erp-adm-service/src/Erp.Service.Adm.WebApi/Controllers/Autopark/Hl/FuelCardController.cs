@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.FuelCardView)]
+[Authorize(AutoparkPermissionCode.FuelCardView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class FuelCardController : BaseController
@@ -25,7 +25,7 @@ public class FuelCardController : BaseController
         => Ok(await Mediator.Send(query, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.FuelCardCreate)]
+    [Authorize(AutoparkPermissionCode.FuelCardCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] FuelCardCreateCommand command,
@@ -33,14 +33,14 @@ public class FuelCardController : BaseController
         => Ok(await Mediator.Send(command, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.FuelCardEdit)]
+    [Authorize(AutoparkPermissionCode.FuelCardEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] FuelCardUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.FuelCardDelete)]
+    [Authorize(AutoparkPermissionCode.FuelCardDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] FuelCardDeleteCommand command,

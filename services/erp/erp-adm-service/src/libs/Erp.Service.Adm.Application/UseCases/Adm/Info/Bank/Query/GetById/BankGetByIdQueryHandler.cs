@@ -26,7 +26,6 @@ internal sealed class BankGetByIdQueryHandler(
                 ShortName = x.ShortName,
                 Inn = x.Inn,
                 Address = x.Address,
-                Website = x.Website,
                 StateId = x.StateId,
                 CreatedAt = x.CreatedAt,
                 LastModifiedAt = x.LastModifiedAt,

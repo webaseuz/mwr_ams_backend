@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.InsuranceTypeView)]
+[Authorize(AutoparkPermissionCode.InsuranceTypeView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class InsuranceTypeController : BaseController
@@ -25,7 +25,7 @@ public class InsuranceTypeController : BaseController
         => Ok(await Mediator.Send(query, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.InsuranceTypeCreate)]
+    [Authorize(AutoparkPermissionCode.InsuranceTypeCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] InsuranceTypeCreateCommand command,
@@ -33,14 +33,14 @@ public class InsuranceTypeController : BaseController
         => Ok(await Mediator.Send(command, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.InsuranceTypeEdit)]
+    [Authorize(AutoparkPermissionCode.InsuranceTypeEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] InsuranceTypeUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.InsuranceTypeDelete)]
+    [Authorize(AutoparkPermissionCode.InsuranceTypeDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] InsuranceTypeDeleteCommand command,

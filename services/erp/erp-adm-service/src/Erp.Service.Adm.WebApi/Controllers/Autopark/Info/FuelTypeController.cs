@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.FuelTypeView)]
+[Authorize(AutoparkPermissionCode.FuelTypeView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class FuelTypeController : BaseController
@@ -25,7 +25,7 @@ public class FuelTypeController : BaseController
         => Ok(await Mediator.Send(query, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.FuelTypeCreate)]
+    [Authorize(AutoparkPermissionCode.FuelTypeCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] FuelTypeCreateCommand command,
@@ -33,14 +33,14 @@ public class FuelTypeController : BaseController
         => Ok(await Mediator.Send(command, cancellationToken));
 
 
-    [Authorize(AdmPermissionCode.FuelTypeEdit)]
+    [Authorize(AutoparkPermissionCode.FuelTypeEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] FuelTypeUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.FuelTypeDelete)]
+    [Authorize(AutoparkPermissionCode.FuelTypeDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] FuelTypeDeleteCommand command,

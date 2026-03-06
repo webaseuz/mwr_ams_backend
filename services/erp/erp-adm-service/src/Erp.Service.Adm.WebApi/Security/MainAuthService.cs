@@ -3,6 +3,7 @@ using Erp.Core.Security;
 using Erp.Core.Service.Application;
 using Erp.Service.Adm.Application;
 using Microsoft.EntityFrameworkCore;
+using WEBASE;
 
 namespace Erp.Service.Adm.WebApi;
 
@@ -24,7 +25,15 @@ public class MainAuthService : IMainAuthService
         get
         {
             if (_isAuthenticated == null)
-                _isAuthenticated = _httpContextAccessor.HttpContext?.Request.Headers.ContainsKey(ApplicationHeaderConst.User);
+            {
+                // ====== BFF MODE (uncomment when switching back to BFF) ======
+                // _isAuthenticated = _httpContextAccessor.HttpContext?.Request.Headers.ContainsKey(ApplicationHeaderConst.User);
+                // ====== END BFF MODE ======
+
+                // ====== DIRECT JWT MODE: IsAuthenticated is pre-loaded by IdentityLoader.LoadAsync() ======
+                _isAuthenticated = false; // not authenticated if LoadAsync didn't set it via ResetUserName()
+                // ====== END DIRECT JWT MODE ======
+            }
 
             return _isAuthenticated ?? false;
         }
@@ -76,10 +85,14 @@ public class MainAuthService : IMainAuthService
                 _userName = _user.UserName;
             }
 
-            if (_userName == null)
-            {
-                _userName = _httpContextAccessor.HttpContext?.Request.Headers[ApplicationHeaderConst.User].FirstOrDefault();
-            }
+            // ====== BFF MODE (uncomment when switching back to BFF) ======
+            // if (_userName == null)
+            //     _userName = _httpContextAccessor.HttpContext?.Request.Headers[ApplicationHeaderConst.User].FirstOrDefault();
+            // ====== END BFF MODE ======
+
+            // ====== DIRECT JWT MODE: _userName is pre-loaded by IdentityLoader.LoadAsync() via ResetUserName() ======
+            // (no fallback needed — if not set by LoadAsync, IsAuthenticated returned false already)
+            // ====== END DIRECT JWT MODE ======
 
             return _userName;
         }
@@ -98,10 +111,55 @@ public class MainAuthService : IMainAuthService
 
                 if (!string.IsNullOrEmpty(userName))
                 {
-                    //_user = _context.Users.MapToAuthModel(RequestedAppId).FirstOrDefault(a => a.UserName.ToLower() == userName.ToLower());
-                }
+                    var dbUser = _context.Users
+                        .Include(u => u.Organization)
+                        .Include(u => u.Person)
+                        .Include(u => u.Language)
+                        .Include(u => u.UserRoles.Where(r => r.StateId == WbStateIdConst.ACTIVE && !r.IsDeleted))
+                            .ThenInclude(ur => ur.Role)
+                                .ThenInclude(r => r.RolePermissions.Where(rp => !rp.IsDeleted))
+                                    .ThenInclude(rp => rp.Permission)
+                        .FirstOrDefault(u => u.UserName.ToLower() == userName.ToLower());
 
-                _user?.ResolveModules();
+                    if (dbUser != null)
+                    {
+                        _user = new UserAuthModel
+                        {
+                            Id = dbUser.Id,
+                            UserName = dbUser.UserName,
+                            FullName = dbUser.Person?.FullName,
+                            IsAdmin = dbUser.Id == 1,
+                            LanguageId = dbUser.LanguageId,
+                            LanguageCode = dbUser.Language?.Code,
+                            Pinfl = dbUser.Person?.Pinfl,
+                            PersonId = (int)dbUser.PersonId,
+                            BranchId = dbUser.BranchId,
+                            PositionId = dbUser.PositionId,
+                            Organizations = dbUser.Organization != null
+                                ? new List<IOrganizationAuthModel>
+                                  {
+                                      new OrganizationAuthModel
+                                      {
+                                          Id = dbUser.Organization.Id,
+                                          FullName = dbUser.Organization.FullName,
+                                          ShortName = dbUser.Organization.ShortName,
+                                          RegionId = dbUser.Organization.RegionId,
+                                          DistrictId = dbUser.Organization.DistrictId ?? 0,
+                                          AppId = AppIdConst.ADM,
+                                      }
+                                  }
+                                : new List<IOrganizationAuthModel>(),
+                            Permissions = dbUser.UserRoles
+                                .SelectMany(ur => ur.Role.RolePermissions
+                                    .Select(rp => rp.Permission.Code))
+                                .Distinct()
+                                .ToList(),
+                            SharedPermissions = new List<string>()
+                        };
+
+                        _user.ResolveModules();
+                    }
+                }
             }
 
             return _user;
@@ -221,6 +279,11 @@ public class MainAuthService : IMainAuthService
     #endregion
 
     public bool HasPermission(params AdmPermissionCode[] permissionCodes)
+    {
+        return permissionCodes.Any(a => HasPermission(a.ToString()));
+    }
+
+    public bool HasPermission(params AutoparkPermissionCode[] permissionCodes)
     {
         return permissionCodes.Any(a => HasPermission(a.ToString()));
     }

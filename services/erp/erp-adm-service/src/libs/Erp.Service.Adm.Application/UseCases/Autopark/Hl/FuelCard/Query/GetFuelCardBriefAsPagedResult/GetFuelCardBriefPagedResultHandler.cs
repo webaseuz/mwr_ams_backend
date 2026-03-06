@@ -32,7 +32,7 @@ public class GetFuelCardBriefPagedResultHandler : IRequestHandler<FuelCardGetLis
     {
         var userInfo = _authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.FuelCardViewAll)))
+        if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.FuelCardViewAll)))
             request.BranchId = userInfo.BranchId;
 
         var query = _context.FuelCards

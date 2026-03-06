@@ -2,8 +2,10 @@ using Erp.Core.Service.Application;
 using AutoMapper;
 using Erp.Core.Service.Domain;
 using Erp.Service.Adm.Models;
+using Erp.Core;
 
 namespace Erp.Service.Adm.Application.UseCases;
+using Erp.Core;
 
 public class OrganizationDtoProfile : CultureProfile
 {

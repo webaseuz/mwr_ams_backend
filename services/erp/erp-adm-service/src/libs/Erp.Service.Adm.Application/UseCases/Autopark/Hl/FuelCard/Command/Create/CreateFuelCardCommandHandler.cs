@@ -17,7 +17,7 @@ internal sealed class CreateFuelCardCommandHandler(
     public async Task<WbHaveId<int>> Handle(FuelCardCreateCommand request, CancellationToken cancellationToken)
     {
         var userInfo = authService.User;
-        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.FuelCardCreate)))
+        if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.FuelCardCreate)))
             request.BranchId = userInfo.BranchId;
 
         var expireAt = DateTime.ParseExact(request.ExpireAt, "MM/yy", CultureInfo.InvariantCulture);

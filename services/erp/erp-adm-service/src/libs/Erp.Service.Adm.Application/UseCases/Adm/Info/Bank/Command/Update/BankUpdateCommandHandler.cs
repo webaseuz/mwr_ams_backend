@@ -35,7 +35,6 @@ internal sealed class BankUpdateCommandHandler(
         entity.ShortName = request.ShortName;
         entity.Inn = request.Inn;
         entity.Address = request.Address;
-        entity.Website = request.Website;
 
         request.Translates.ApplyChangesByUniqueFKTo(entity.Translates);
 

@@ -57,29 +57,29 @@ public static class ExpenseBriefDtoExtension
     {
         foreach (var ent in query)
         {
-            var hasAccept = authService.HasPermission(nameof(AdmPermissionCode.ExpenseAccept));
+            var hasAccept = authService.HasPermission(nameof(AutoparkPermissionCode.ExpenseAccept));
 
             ent.CanAccept = StatusIdConst.CanExpenseStatus(ent.StatusId, StatusIdConst.ACCEPTED) &&
-                           authService.HasPermission(nameof(AdmPermissionCode.ExpenseAccept));
+                           authService.HasPermission(nameof(AutoparkPermissionCode.ExpenseAccept));
 
             ent.CanCancel = false;
 
             /*ent.CanCancel = StatusIdConst.CanExpenseStatus(ent.StatusId, StatusIdConst.CANCELLED) &&
-                            permissions.Contains(nameof(AdmPermissionCode.ExpenselCancel));*/
+                            permissions.Contains(nameof(AutoparkPermissionCode.ExpenselCancel));*/
 
             ent.CanModify = StatusIdConst.CanExpenseStatus(ent.StatusId, StatusIdConst.MODIFIED) &&
-                            authService.HasPermission(nameof(AdmPermissionCode.ExpenseEdit)) ||
+                            authService.HasPermission(nameof(AutoparkPermissionCode.ExpenseEdit)) ||
                             StatusIdConst.CanInvoice(ent.StatusId) &&
-                            authService.HasPermission(nameof(AdmPermissionCode.InvoiceAttach));
+                            authService.HasPermission(nameof(AutoparkPermissionCode.InvoiceAttach));
 
             ent.CanDelete = StatusIdConst.CanExpenseStatus(ent.StatusId, StatusIdConst.DELETED) &&
-                            authService.HasPermission(nameof(AdmPermissionCode.ExpenseDelete));
+                            authService.HasPermission(nameof(AutoparkPermissionCode.ExpenseDelete));
 
             ent.CanRevoke = StatusIdConst.CanExpenseStatus(ent.StatusId, StatusIdConst.REVOKED) &&
-                            authService.HasPermission(nameof(AdmPermissionCode.ExpenseRevoke));
+                            authService.HasPermission(nameof(AutoparkPermissionCode.ExpenseRevoke));
 
             ent.CanSend = StatusIdConst.CanExpenseStatus(ent.StatusId, StatusIdConst.SEND) &&
-                            authService.HasPermission(nameof(AdmPermissionCode.ExpenseSend));
+                            authService.HasPermission(nameof(AutoparkPermissionCode.ExpenseSend));
         }
 
         return await Task.FromResult(query);

@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.OptimalRoute)]
+[Authorize(AutoparkPermissionCode.OptimalRoute)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class RegionController : BaseController

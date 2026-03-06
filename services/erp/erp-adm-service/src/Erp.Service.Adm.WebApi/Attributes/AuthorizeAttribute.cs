@@ -20,4 +20,10 @@ public class AuthorizeAttribute : TypeFilterAttribute
     {
         Arguments = new[] { permissionCodes.Select(c => c.ToString()).ToArray() };
     }
+
+    public AuthorizeAttribute(params AutoparkPermissionCode[] permissionCodes)
+        : base(typeof(WbAuthorizeFilter))
+    {
+        Arguments = new[] { permissionCodes.Select(c => c.ToString()).ToArray() };
+    }
 }

@@ -74,7 +74,7 @@ internal sealed class UpdateRefuelCommandHandler(
             entity.Longitude = request.Longitude;
 
             var userInfo = authService.User;
-            if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.RefuelCreateForAllBranch)) || !request.BranchId.HasValue)
+            if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.RefuelCreateForAllBranch)) || !request.BranchId.HasValue)
                 entity.BranchId = userInfo.BranchId;
 
             var requestIds = request.Files.Select(f => f.Id).ToHashSet();

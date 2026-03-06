@@ -1,12 +1,12 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.DriverPenaltyView, AdmPermissionCode.DriverPenaltyBranchView, AdmPermissionCode.DriverPenaltyAllView)]
+[Authorize(AutoparkPermissionCode.DriverPenaltyView, AutoparkPermissionCode.DriverPenaltyBranchView, AutoparkPermissionCode.DriverPenaltyAllView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class DriverPenaltyController : BaseController
 {
-    [Authorize(AdmPermissionCode.DriverPenaltyPay)]
+    [Authorize(AutoparkPermissionCode.DriverPenaltyPay)]
     [HttpGet]
     public async Task<IActionResult> GetBriefListAsync(
         [FromQuery] DriverPenaltyGetListQuery query,

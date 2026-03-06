@@ -32,7 +32,7 @@ public class GetDriverBriefPagedResultHandler : IRequestHandler<DriverGetListQue
     {
         var userInfo = _authService.User;
 
-        if (!userInfo.Permissions.Contains(nameof(AdmPermissionCode.AllViewDriver)))
+        if (!userInfo.Permissions.Contains(nameof(AutoparkPermissionCode.AllViewDriver)))
             request.BranchId = userInfo.BranchId;
 
         var query = _context.Drivers

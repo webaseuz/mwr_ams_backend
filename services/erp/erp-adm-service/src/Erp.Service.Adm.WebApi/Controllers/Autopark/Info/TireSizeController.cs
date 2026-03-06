@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.TireSizeView)]
+[Authorize(AutoparkPermissionCode.TireSizeView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class TireSizeController : BaseController
@@ -24,21 +24,21 @@ public class TireSizeController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TireSizeCreate)]
+    [Authorize(AutoparkPermissionCode.TireSizeCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] TireSizeCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TireSizeEdit)]
+    [Authorize(AutoparkPermissionCode.TireSizeEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] TireSizeUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.TireSizeDelete)]
+    [Authorize(AutoparkPermissionCode.TireSizeDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] TireSizeDeleteCommand command,

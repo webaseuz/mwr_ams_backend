@@ -1,7 +1,7 @@
 
 namespace Erp.Service.Adm.WebApi;
 
-[Authorize(AdmPermissionCode.RefuelView)]
+[Authorize(AutoparkPermissionCode.RefuelView)]
 [ApiController]
 [Route("[controller]/[action]")]
 public class RefuelController : BaseController
@@ -24,49 +24,49 @@ public class RefuelController : BaseController
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(query, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelCreate)]
+    [Authorize(AutoparkPermissionCode.RefuelCreate)]
     [HttpPost]
     public async Task<IActionResult> CreateAsync(
         [FromBody] RefuelCreateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelEdit)]
+    [Authorize(AutoparkPermissionCode.RefuelEdit)]
     [HttpPost]
     public async Task<IActionResult> UpdateAsync(
         [FromBody] RefuelUpdateCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelAccept)]
+    [Authorize(AutoparkPermissionCode.RefuelAccept)]
     [HttpPost]
     public async Task<IActionResult> AcceptAsync(
         [FromBody] RefuelAcceptCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelSend)]
+    [Authorize(AutoparkPermissionCode.RefuelSend)]
     [HttpPost]
     public async Task<IActionResult> SendAsync(
         [FromBody] RefuelSendCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelRevoke)]
+    [Authorize(AutoparkPermissionCode.RefuelRevoke)]
     [HttpPost]
     public async Task<IActionResult> RevokeAsync(
         [FromBody] RefuelRevokeCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelCancel)]
+    [Authorize(AutoparkPermissionCode.RefuelCancel)]
     [HttpPost]
     public async Task<IActionResult> CancelAsync(
         [FromBody] RefuelCancelCommand command,
         CancellationToken cancellationToken)
         => Ok(await Mediator.Send(command, cancellationToken));
 
-    [Authorize(AdmPermissionCode.RefuelDelete)]
+    [Authorize(AutoparkPermissionCode.RefuelDelete)]
     [HttpPost]
     public async Task<IActionResult> DeleteAsync(
         [FromBody] RefuelDeleteCommand command,
