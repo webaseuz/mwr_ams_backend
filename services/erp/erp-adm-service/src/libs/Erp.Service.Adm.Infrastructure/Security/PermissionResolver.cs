@@ -23,6 +23,9 @@ public class PermissionResolver : IPermissionResolver
         if (!PERMISSION_CODE_INITIALIZED)
         {
             await ResolvePermissionsAsync<AdmPermissionCode, Permission, PermissionTranslate, PermissionSubGroup, PermissionSubGroupTranslate>();
+            await ResolvePermissionsAsync<AutoparkPermissionCode, Permission, PermissionTranslate, PermissionSubGroup, PermissionSubGroupTranslate>();
+            await ResolvePermissionsAsync<FinPermissionCode, Permission, PermissionTranslate, PermissionSubGroup, PermissionSubGroupTranslate>();
+            await ResolvePermissionsAsync<InvPermissionCode, Permission, PermissionTranslate, PermissionSubGroup, PermissionSubGroupTranslate>();
 
             // Resolve shared permissions (MUST come AFTER native permissions)
             /*await ResolveSharedPermissionsAsync(typeof(LmsSharedPermissionCode));
